@@ -1,0 +1,10 @@
+---
+
+- name: Install useful packages
+  hosts: thinkpad
+  tags: 
+  - packages
+  roles:
+    - workstation_packages
+
+
