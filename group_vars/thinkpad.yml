@@ -18,11 +18,6 @@ i3_keybindings_extra:
 
 i3_applications:
   - application:
-    class: "Terminator"
-    name: "terminator"
-    workspace: 1
-    on_startup: true
-  - application:
     class: "Firefox"
     name: "firefox"
     workspace: 2
@@ -40,5 +35,5 @@ i3:
 i3_desktop_env:
   background: "/home/{{ user }}/.config/background.png"
 
-i3lock_options: "--image=/home/{{ user }}/.config/lockscreen.png -t"
+i3lock_options: "i3lock --image=/home/{{ user }}/.config/lockscreen.png"
 
