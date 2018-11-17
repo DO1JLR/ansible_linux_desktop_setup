@@ -4,3 +4,6 @@
 [submodule "roles/i3wm"]
 	path = roles/i3wm
 	url = https://github.com/DO1JLR/ansible-role-i3wm.git
+[submodule "roles/dotfiles"]
+	path = roles/dotfiles
+	url = https://github.com/DO1JLR/role_dotfiles.git

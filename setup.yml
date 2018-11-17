@@ -5,8 +5,17 @@
   tags: 
   - packages
   - updates
+  - setup
   roles:
     - workstation_packages
+
+- name: Install useful dotfiles
+  hosts: thinkpad
+  tags: 
+  - setup
+  roles:
+    - dotfiles
+
 
 - name: Install useful packages
   hosts: thinkpad

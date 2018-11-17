@@ -1,5 +1,7 @@
 ---
 user: l3d
+admins:
+  - l3d
 
 i3_packages_extra:
   - ranger
