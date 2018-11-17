@@ -1,0 +1,9 @@
+---
+
+- name: copy bg
+  copy:
+    src: files/background.png
+    dest: /home/{{ user }}/.config/background.png
+    owner: "{{ user }}"
+    group: "{{ user }}"
+    mode: 0644

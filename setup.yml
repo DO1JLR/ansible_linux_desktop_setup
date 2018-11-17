@@ -4,7 +4,17 @@
   hosts: thinkpad
   tags: 
   - packages
+  - updates
   roles:
     - workstation_packages
+
+- name: Install useful packages
+  hosts: thinkpad
+  tags: 
+  - packages
+  - i3wm
+  roles:
+    - copy_files
+    - i3wm
 
 

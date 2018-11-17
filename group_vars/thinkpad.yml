@@ -1,0 +1,41 @@
+---
+user: l3d
+
+i3_packages_extra:
+  - ranger
+
+i3_keybindings_extra:
+  - keybinding:
+    name: Volume (mute/unmute)
+    key: $mod+F12
+    exec: --no-startup-id amixer sset Master toggle
+  - keybinding:
+    name: Volue (default)
+    key: $mod+Shift+F12
+    exec: --no-startup-id amixer sset Master 40%
+
+i3_applications:
+  - application:
+    class: "Terminator"
+    name: "terminator"
+    workspace: 1
+    on_startup: false
+  - application:
+    class: "Firefox"
+    name: "firefox"
+    workspace: 2
+    on_startup: true
+  - application:
+    class: "Thunderbird"
+    name: "thunderbird"
+    workspace: 9
+    on_startup: true
+
+i3:
+  font_size: 12
+  focus_follows_mouse: true
+
+i3_desktop_env:
+  background: "/home/{{ user }}/.config/background.png"
+
+
