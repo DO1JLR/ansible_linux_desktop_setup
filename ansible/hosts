@@ -1,0 +1,2 @@
+[thinkpad]
+t460p ansible_host="localhost" ansible_connection=local
