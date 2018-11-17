@@ -19,7 +19,7 @@ i3_applications:
     class: "Terminator"
     name: "terminator"
     workspace: 1
-    on_startup: false
+    on_startup: true
   - application:
     class: "Firefox"
     name: "firefox"
