@@ -7,3 +7,12 @@
     owner: "{{ user }}"
     group: "{{ user }}"
     mode: 0644
+
+- name: copy bg
+  copy:
+    src: files/lockscreen.png
+    dest: /home/{{ user }}/.config/lockscreen.png
+    owner: "{{ user }}"
+    group: "{{ user }}"
+    mode: 0644
+

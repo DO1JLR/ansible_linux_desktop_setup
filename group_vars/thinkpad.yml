@@ -38,4 +38,5 @@ i3:
 i3_desktop_env:
   background: "/home/{{ user }}/.config/background.png"
 
+i3lock_options: "--image=/home/{{ user }}/.config/lockscreen.png -t"
 
