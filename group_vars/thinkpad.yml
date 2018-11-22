@@ -36,4 +36,8 @@ i3_desktop_env:
   background: "/home/{{ user }}/.config/background.png"
 
 i3lock_options: "i3lock --image=/home/{{ user }}/.config/lockscreen.png"
+# optional .bashrc commands
+bash:
+  bashrc: "if [ ! -f /tmp/autostart ]; then\n  /opt/start.sh \n#  ssh-add ~/.ssh/id_ed25519\nelse\n ddate;fi\n"
+
 
