@@ -16,11 +16,4 @@
     group: "{{ user }}"
     mode: 0644
 
-- name: copy start
-  copy:
-    src: files/start.sh
-    dest: /opt/start.sh
-    owner: "root"
-    group: "root"
-    mode: 0644
 

@@ -15,6 +15,15 @@ i3_keybindings_extra:
     name: Volue (default)
     key: $mod+Shift+F12
     exec: --no-startup-id amixer sset Master 40%
+  - keybinding:
+    name: darker
+    key: XF86MonBrightnessDown
+    exec: --no-startup-id light -U 12
+  - keybinding:
+    name: lighter
+    key: XF86MonBrightnessUp
+    exec: --no-startup-id light -A 9
+
 
 i3_applications:
   - application:
@@ -36,8 +45,9 @@ i3_desktop_env:
   background: "/home/{{ user }}/.config/background.png"
 
 i3lock_options: "i3lock --image=/home/{{ user }}/.config/lockscreen.png"
+
 # optional .bashrc commands
 bash:
-  bashrc: "if [ ! -f /tmp/autostart ]; then\n  /opt/start.sh \n#  ssh-add ~/.ssh/id_ed25519\nelse\n ddate;fi\n"
+  bashrc: "alias pwgen=\"/usr/bin/pwgen --num-passwords=2000 --numerals --capitalize --secure --no-vowels  --symbols 66 | grep -v '0' | grep -v 'o' | grep -v 'O' | grep -v 'r' | grep -v 'v' | grep -v 'I' | grep -v 'l' | grep -v 'y' | grep -v 'z' | grep -v '1' | grep -v '#' | grep -v '%' | grep -v '`' | grep -v '´' | grep -v '@'   | tail -1\"\n"
 
 
