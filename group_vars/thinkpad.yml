@@ -46,8 +46,3 @@ i3_desktop_env:
 
 i3lock_options: "i3lock --image=/home/{{ user }}/.config/lockscreen.png"
 
-# optional .bashrc commands
-bash:
-  bashrc: "alias pwgen=\"/usr/bin/pwgen --num-passwords=2000 --numerals --capitalize --secure --no-vowels  --symbols 66 | grep -v '0' | grep -v 'o' | grep -v 'O' | grep -v 'r' | grep -v 'v' | grep -v 'I' | grep -v 'l' | grep -v 'y' | grep -v 'z' | grep -v '1' | grep -v '#' | grep -v '%' | grep -v '`' | grep -v '´' | grep -v '@'   | tail -1\"\n"
-
-
