@@ -16,6 +16,12 @@
   roles:
     - dotfiles
 
+- name: configure some programms
+  hosts: thinkpad
+  tags:
+  - setup
+  roles:
+    - firefox
 
 - name: Install useful packages
   hosts: thinkpad

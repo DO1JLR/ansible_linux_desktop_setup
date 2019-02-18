@@ -46,3 +46,13 @@ i3_desktop_env:
 
 i3lock_options: "i3lock --image=/home/{{ user }}/.config/lockscreen.png"
 
+
+# Firefox config
+search_engines:
+  - google
+  - duckduckgo
+  - invidious
+  - searx
+  - qwant
+
+
