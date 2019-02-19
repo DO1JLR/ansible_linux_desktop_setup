@@ -16,12 +16,21 @@
   roles:
     - dotfiles
 
-- name: configure some programms
+- name: install modules for sound and bluetooth
   hosts: thinkpad
   tags:
   - setup
+  - pulseaudio
   roles:
-    - firefox
+    - pulseaudio
+
+# - name: improve firefox configuration
+#  hosts: thinkpad
+#  tags:
+#  - setup
+#  - firefox
+#  roles:
+#    - firefox
 
 - name: Install useful packages
   hosts: thinkpad
