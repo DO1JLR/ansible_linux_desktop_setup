@@ -10,3 +10,6 @@
 [submodule "roles/firefox"]
 	path = roles/firefox
 	url = https://github.com/maxbachmann/role-firefox.git
+[submodule "roles/pulseaudio"]
+	path = roles/pulseaudio
+	url = https://github.com/DO1JLR/role_pulseaudio_archlinux.git
