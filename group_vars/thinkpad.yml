@@ -1,6 +1,9 @@
 ---
 # flobal user config:
 user: l3d
+users:
+  l3d:
+    - l3d
 admins:
   - l3d
 
@@ -32,10 +35,6 @@ i3_keybindings_extra:
     name: darker
     key: XF86AudioMute
     exec: --no-startup-id pulsemixer --toggle-mute 
-  - keybinding:
-    name: darker
-    key: XF86MonBrightnessDown
-    exec: --no-startup-id light -U 12
   - keybinding:
     name: darker
     key: XF86MonBrightnessDown
