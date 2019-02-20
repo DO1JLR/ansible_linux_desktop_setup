@@ -13,8 +13,8 @@
 [submodule "roles/pulseaudio"]
 	path = roles/pulseaudio
 	url = https://github.com/DO1JLR/role_pulseaudio_archlinux.git
-[submodule "sshd"]
-	path = sshd
+[submodule "roles/sshd"]
+	path = roles/sshd
 	url = https://github.com/DO1JLR/role_sshd.git
 [submodule "roles/authorized_keys"]
 	path = roles/authorized_keys
