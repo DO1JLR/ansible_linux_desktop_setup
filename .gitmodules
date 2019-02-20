@@ -22,3 +22,6 @@
 [submodule "roles/sshd"]
 	path = roles/sshd
 	url = https://github.com/DO1JLR/role_sshd.git
+[submodule "roles/nextcloud"]
+	path = roles/nextcloud
+	url = https://github.com/DO1JLR/role_nextcloud_client.git
