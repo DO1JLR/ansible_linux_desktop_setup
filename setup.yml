@@ -9,6 +9,16 @@
   roles:
     - workstation_packages
 
+- name: enable and secure sshd
+  hosts: thinkpad
+  tags: 
+  - secure
+  - ssh
+  - setup
+  roles:
+    - authorized_keys
+    - sshd
+
 - name: Install useful dotfiles
   hosts: thinkpad
   tags: 
@@ -24,6 +34,10 @@
   roles:
     - pulseaudio
 
+#
+# Currently it dosen't work on arch. Rely sad!
+# Issue is open: https://github.com/maxbachmann/role-firefox/issues/29
+#
 # - name: improve firefox configuration
 #  hosts: thinkpad
 #  tags:
@@ -31,6 +45,7 @@
 #  - firefox
 #  roles:
 #    - firefox
+
 
 - name: Install useful packages
   hosts: thinkpad

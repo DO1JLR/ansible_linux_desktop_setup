@@ -1,20 +1,41 @@
 ---
+# flobal user config:
 user: l3d
 admins:
   - l3d
 
+
+# i3wm config:
+
 i3_packages_extra:
   - ranger
+  - light
 
 i3_keybindings_extra:
   - keybinding:
     name: Volume (mute/unmute)
     key: $mod+F12
-    exec: --no-startup-id amixer sset Master toggle
+    exec: --no-startup-id pulsemixer --toggle-mute
   - keybinding:
     name: Volue (default)
     key: $mod+Shift+F12
-    exec: --no-startup-id amixer sset Master 40%
+    exec: --no-startup-id pulsemixer --set-volume 42
+  - keybinding:
+    name: volume-up
+    key: XF86AudioRaiseVolume
+    exec: --no-startup-id pulsemixer --change-volume +4
+  - keybinding:
+    name: volume-down
+    key: XF86AudioLowerVolume
+    exec: --no-startup-id pulsemixer --change-volume -5
+  - keybinding:
+    name: darker
+    key: XF86AudioMute
+    exec: --no-startup-id pulsemixer --toggle-mute 
+  - keybinding:
+    name: darker
+    key: XF86MonBrightnessDown
+    exec: --no-startup-id light -U 12
   - keybinding:
     name: darker
     key: XF86MonBrightnessDown
