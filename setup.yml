@@ -56,4 +56,13 @@
     - copy_files
     - i3wm
 
+- name: install nextcloud-client
+  hosts: thinkpad
+  tags:
+  - setup
+  - nextcloud
+  roles:
+    - nextcloud
+
+
 
