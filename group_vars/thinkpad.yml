@@ -74,11 +74,41 @@ i3lock_options: "i3lock --image=/home/{{ user }}/.config/lockscreen.png"
 
 
 # Firefox config
+username: "{{ user }}"
+
 search_engines:
   - google
   - duckduckgo
   - invidious
   - searx
   - qwant
+
+addon_list:
+  - name: passff
+    directory: "passff@invicem.pro.xpi"    
+
+  - name: ublock-origin
+    directory: "uBlock0@raymondhill.net"
+
+  - name: umatrix
+    directory: "uMatrix@raymondhill.net"
+
+  - name: decentraleyes
+    directory: "jid1-BoFifL9Vbdl2zQ@jetpack"
+
+  - name: first-party-isolation
+    directory: "{33c93ccc-ceed-47d2-9645-805ea58c8a07}"
+
+  - name: neat-url
+    directory: "neaturl@hugsmile.eu"
+
+  - name: skip-redirect
+    directory: "skipredirect@sblask"
+
+  - name: temporary-containers
+    directory: "{c607c8df-14a7-4f28-894f-29e8722976af}"
+
+  - name: multi-account-containers
+    directory: "@testpilot-containers"
 
 
