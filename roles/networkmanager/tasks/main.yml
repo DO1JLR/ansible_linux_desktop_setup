@@ -1,0 +1,26 @@
+---
+
+- name: install needed packages on arch
+  become: yes
+  pacman :
+    name:
+     - netcfg 
+     - dialog
+     - wpa_supplicant
+     - wireless_tools
+     - iw 
+     - crda
+     - networkmanager
+     - bind-tools
+     - mtr
+     - network-manager-applet
+     - nm-connection-editor
+    state: latest
+ 
+- name: enable networkmanaer
+  become: yes
+  systemd:
+    name: NetworkManager.service
+    enabled: yes
+  
+   
