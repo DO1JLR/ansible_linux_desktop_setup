@@ -36,17 +36,13 @@
     - pulseaudio
     - networkmanager
 
-#
-# Currently it dosen't work on arch. Rely sad!
-# Issue is open: https://github.com/maxbachmann/role-firefox/issues/29
-#
-# - name: improve firefox configuration
-#  hosts: thinkpad
-#  tags:
-#  - setup
-#  - firefox
-#  roles:
-#    - firefox
+- name: improve firefox configuration
+  hosts: thinkpad
+  tags:
+  - setup
+  - firefox
+  roles:
+    - firefox
 
 
 - name: Install useful packages
