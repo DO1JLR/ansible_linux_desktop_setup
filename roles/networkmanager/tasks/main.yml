@@ -4,7 +4,6 @@
   become: yes
   pacman :
     name:
-     - netcfg 
      - dialog
      - wpa_supplicant
      - wireless_tools
