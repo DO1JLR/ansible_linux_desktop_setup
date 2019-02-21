@@ -13,6 +13,7 @@ admins:
 i3_packages_extra:
   - ranger
   - light
+  - pass
 
 i3_keybindings_extra:
   - keybinding:
@@ -57,8 +58,12 @@ i3_applications:
     workspace: 9
     on_startup: true
 
+i3_run_on_startup:
+  - nextcloud
+
+
 i3:
-  font_size: 12
+  font_size: 11
   focus_follows_mouse: true
 
 i3_desktop_env:
