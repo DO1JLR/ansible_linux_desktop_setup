@@ -31,8 +31,10 @@
   tags:
   - setup
   - pulseaudio
+  - networkmanager
   roles:
     - pulseaudio
+    - networkmanager
 
 #
 # Currently it dosen't work on arch. Rely sad!

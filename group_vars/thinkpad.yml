@@ -60,6 +60,7 @@ i3_applications:
 
 i3_run_on_startup:
   - nextcloud
+  - nm-applet
 
 
 i3:
