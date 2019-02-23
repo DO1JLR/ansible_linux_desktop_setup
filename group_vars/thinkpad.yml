@@ -14,6 +14,9 @@ i3_packages_extra:
   - ranger
   - light
   - pass
+  - gnome
+  - asciinema
+  - mtr
 
 i3_keybindings_extra:
   - keybinding:
@@ -60,7 +63,7 @@ i3_applications:
 
 i3_run_on_startup:
   - nextcloud
-  - nm-applet
+  - sudo nm-applet
 
 
 i3:
