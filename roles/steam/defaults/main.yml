@@ -1,0 +1,5 @@
+
+steam_default_packages:
+  - steam
+  - steam-native-runtime
+

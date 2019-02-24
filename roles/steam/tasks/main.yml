@@ -1,0 +1,9 @@
+---
+
+- name: Install steam on arch
+  pacman:
+    name: "{{ steam_default_packages }}"
+    state: latest
+    update_cache: yes
+  become: yes
+

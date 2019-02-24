@@ -17,6 +17,8 @@ i3_packages_extra:
   - gnome
   - asciinema
   - mtr
+  - evince
+  - libreoffice
 
 i3_keybindings_extra:
   - keybinding:
