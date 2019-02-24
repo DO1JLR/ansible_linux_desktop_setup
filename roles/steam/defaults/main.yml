@@ -2,4 +2,8 @@
 steam_default_packages:
   - steam
   - steam-native-runtime
+  - lib32-keyutils
+  - lib32-harfbuzz
+  - lib32-freetype2
+  - lib32-krb5
 
