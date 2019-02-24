@@ -6,4 +6,6 @@ steam_default_packages:
   - lib32-harfbuzz
   - lib32-freetype2
   - lib32-krb5
+  - vkd3d
+  - lib32-vkd3d
 
