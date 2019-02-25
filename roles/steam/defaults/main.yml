@@ -8,4 +8,13 @@ steam_default_packages:
   - lib32-krb5
   - vkd3d
   - lib32-vkd3d
+  - lib32-vulkan-validation-layers
+  - lib32-vulkan-intel 
+  - libretro-shaders-slang
+  - vulkan-validation-layers
+  - vulkan-trace
+  - vulkan-tools
+  - vulkan-intel
+  - vulkan-headers
+  - vulkan-extra-layers
 
