@@ -1,0 +1,26 @@
+---
+
+- name: copy sound warning script
+  become: yes
+  copy:
+    src: 'files/akku.sh'
+    dest: '/opt/akku.sh'
+    owner: 'root'
+    group: 'root'
+    mode: '0755'
+
+- name: install zenity
+  become: yes
+  package:
+    name: zenity
+    state: present
+
+- name: Check akku every 2 minutes
+  become: yes
+  cron:
+    name: check if akku still okay
+    job: /opt/akku.sh
+    minute: '*/2'
+    user: root
+    cron_file: /etc/crontab
+

@@ -26,6 +26,15 @@
   roles:
     - dotfiles
 
+- name: set akku warning
+  hosts: thinkpad
+  tags: 
+  - setup
+  - akku
+  roles:
+    - akku-warning
+
+
 - name: install modules for sound and bluetooth
   hosts: thinkpad
   tags:
