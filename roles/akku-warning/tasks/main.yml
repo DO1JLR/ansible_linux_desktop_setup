@@ -21,6 +21,6 @@
     name: check if akku still okay
     job: /opt/akku.sh
     minute: '*/2'
-    user: root
+    user: '{{ user }}'
     cron_file: /etc/crontab
 
