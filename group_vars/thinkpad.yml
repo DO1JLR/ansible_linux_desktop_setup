@@ -3,11 +3,20 @@
 user: l3d
 users:
   l3d:
-    - l3d
+    - l3d@backup.l3d.yt
+    - l3d@backup.l3d.yt
+    - l3d@derpy.l3d.yt
+    - l3d@mobile.l3d.yt
+    - l3d@pinkie.l3d.yt
+
 admins:
   - l3d
 
+accounts:
+  - l3d
 
+ssh_public_key_store: 'admin_ssh_keys'
+home_sweet_home: false
 # i3wm config:
 
 i3_packages_extra:
@@ -76,7 +85,7 @@ i3:
 i3_desktop_env:
   background: "/home/{{ user }}/.config/background.png"
 
-i3lock_options: "i3lock --image=/home/{{ user }}/.config/lockscreen.png"
+i3lock_options: "i3lock --image=/home/{{ user }}/.config/lockscreen.png --color 000000"
 
 
 # Firefox config

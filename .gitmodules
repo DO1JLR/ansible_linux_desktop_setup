@@ -25,3 +25,9 @@
 [submodule "roles/nextcloud"]
 	path = roles/nextcloud
 	url = https://github.com/DO1JLR/role_nextcloud_client.git
+[submodule "roles/ntp"]
+	path = roles/ntp
+	url = https://github.com/DO1JLR/role-ntp.git
+[submodule "roles/arch-fonts"]
+	path = roles/arch-fonts
+	url = https://github.com/DO1JLR/role-arch-fonts.git

@@ -62,6 +62,7 @@
   roles:
     - copy_files
     - i3wm
+    - ntp
 
 - name: install nextcloud-client
   hosts: thinkpad
@@ -71,5 +72,14 @@
   roles:
     - nextcloud
 
+- name: install some arch fonts
+  hosts: thinkpad
+  tags:
+  - arch
+  - font
+  - fonts
+  - schrift
+  roles:
+   - arch-fonts
 
 
