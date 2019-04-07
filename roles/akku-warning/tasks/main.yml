@@ -24,3 +24,20 @@
     user: '{{ user }}'
     cron_file: /etc/crontab
 
+- name: Make sure cron is installed
+  become: true
+  when: install_and_enable_cronie
+  packages:
+    names:
+      - cronie
+    state: latest
+
+- name: Make sure cron is running
+  become: true
+  when: install_and_enable_cronie
+  systemd:
+    name: cronie.service
+    state: started
+    enabled: yes
+    daemon_reload: yes
+ 
