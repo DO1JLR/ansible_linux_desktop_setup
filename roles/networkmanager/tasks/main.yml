@@ -2,21 +2,29 @@
 
 - name: install needed packages on arch
   become: yes
-  pacman :
+  pacman:
     name:
-     - dialog
-     - wpa_supplicant
      - wireless_tools
      - iw 
      - crda
      - networkmanager
-     - bind-tools
+     - dnsutils
      - mtr
+    state: latest
+  when: ansible_distribution == 'Archlinux'
+
+- name: install needed packages for NetworkManager
+  become: yes
+  package:
+    name:
+     - dialog
+     - wpa_supplicant
+     - NetworkManager
      - network-manager-applet
      - nm-connection-editor
     state: latest
- 
-- name: enable networkmanaer
+
+- name: enable networkmanaiger
   become: yes
   systemd:
     name: NetworkManager.service
