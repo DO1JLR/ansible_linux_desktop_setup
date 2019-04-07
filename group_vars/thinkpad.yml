@@ -4,10 +4,10 @@ user: l3d
 users:
   l3d:
     - l3d@backup.l3d.yt
-    - l3d@backup.l3d.yt
     - l3d@derpy.l3d.yt
     - l3d@mobile.l3d.yt
     - l3d@pinkie.l3d.yt
+    - l3d@business.wingcon.com
 
 admins:
   - l3d

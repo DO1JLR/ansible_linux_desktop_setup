@@ -9,10 +9,21 @@
     group: 'root'
     mode: '0755'
 
-- name: install zenity
+- name: copy sound warning video
+  become: yes
+  copy:
+    src: 'files/low_battery.mkv'
+    dest: '/opt/low_battery.mkv'
+    owner: 'root'
+    group: 'root'
+    mode: '0644'
+
+- name: install zenity and mpv for notifications
   become: yes
   package:
-    name: zenity
+    name: 
+      - zenity
+      - mpv
     state: present
 
 - name: Check akku every 2 minutes
@@ -20,17 +31,17 @@
   cron:
     name: check if akku still okay
     job: /opt/akku.sh
-    minute: '*/2'
+    minute: '*/3'
     user: '{{ user }}'
     cron_file: /etc/crontab
 
 - name: Make sure cron is installed
   become: true
   when: install_and_enable_cronie
-  packages:
-    names:
+  package:
+    name:
       - cronie
-    state: latest
+    state: present
 
 - name: Make sure cron is running
   become: true
