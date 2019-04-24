@@ -5,7 +5,7 @@
     src: "{{ item.src }}"
     dest: "{{ item.dest }}"
   with_items:
-    - { src: 'files/background.png', dest: "/home/{{ user }}/.config/background.png" }
-    - { src: 'files/lockscreen.png', dest: '/home/{{ user }}/.config/lockscreen.png' }
-    - { src: 'files/xinitrc', dest: '/home/{{ user }}/.xinitrc' }
+    - { src: 'files/background.png', dest: "/home/{{ copy_to_user }}/.config/background.png" }
+    - { src: 'files/lockscreen.png', dest: '/home/{{ copy_to_user }}/.config/lockscreen.png' }
+    - { src: 'files/xinitrc', dest: '/home/{{ copy_to_user }}/.xinitrc' }
 

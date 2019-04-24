@@ -17,14 +17,14 @@
   dnf:
     name: NetworkManager
     state: present
-  when: ansible_distribution == Fedora
+  when: ansible_distribution == 'Fedora'
 
 - name: install NetworkManager
   become: yes
   apt:
     name: networkmanager
     state: present
-  when: ansible_os_family == Debian
+  when: ansible_os_family == 'Debian'
 
 - name: install needed packages for NetworkManager
   become: yes

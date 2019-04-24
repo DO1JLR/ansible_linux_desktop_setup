@@ -19,3 +19,5 @@ accounts:
   - lilian
 
 akku_user: "lilian"
+
+copy_to_user: "{{ akku_user }}"
