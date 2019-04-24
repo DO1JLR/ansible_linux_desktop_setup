@@ -71,17 +71,5 @@ i3_desktop_env:
 
 i3lock_options: "i3lock --image=/home/{{ user }}/.config/lockscreen.png --color 000000"
 
+install_and_enable_cronie: true
 
-# Firefox config
-username: "{{ user }}"
-
-search_engines:
-  - google
-  - duckduckgo
-  - invidious
-  - searx
-  - qwant
-
-addon_list_extra:
-  - name: passff
-    directory: "passff@invicem.pro.xpi"

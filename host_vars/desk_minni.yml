@@ -17,3 +17,5 @@ admins_ssh_root_prefix:
 
 accounts:
   - lilian
+
+akku_user: "lilian"
