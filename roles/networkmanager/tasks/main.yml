@@ -1,5 +1,4 @@
 ---
-
 - name: install needed packages on arch
   become: yes
   pacman:
@@ -13,21 +12,32 @@
     state: latest
   when: ansible_distribution == 'Archlinux'
 
+- name: install Networkmanager
+  become: yes
+  dnf:
+    name: NetworkManager
+    state: present
+  when: ansible_distribution == Fedora
+
+- name: install NetworkManager
+  become: yes
+  apt:
+    name: networkmanager
+    state: present
+  when: ansible_os_family == Debian
+
 - name: install needed packages for NetworkManager
   become: yes
   package:
     name:
      - dialog
      - wpa_supplicant
-     - NetworkManager
      - network-manager-applet
      - nm-connection-editor
-    state: latest
+    state: present
 
-- name: enable networkmanaiger
+- name: enable networkmanager
   become: yes
   systemd:
     name: NetworkManager.service
     enabled: yes
-  
-   
