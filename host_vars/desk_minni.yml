@@ -1,0 +1,19 @@
+---
+# local user config:
+users:
+  lilian:
+    - l3d@backup.l3d.yt
+    - l3d@derpy.l3d.yt
+    - l3d@mobile.l3d.yt
+    - l3d@pinkie.l3d.yt
+    - l3d@business.wingcon.com
+
+admins:
+  - lilian
+
+# used to automatically generate correct admin keys
+admins_ssh_root_prefix:
+  - l3d
+
+accounts:
+  - lilian

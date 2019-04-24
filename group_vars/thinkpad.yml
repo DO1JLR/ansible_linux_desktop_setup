@@ -1,20 +1,4 @@
 ---
-# local user config:
-user: l3d
-users:
-  l3d:
-    - l3d@backup.l3d.yt
-    - l3d@derpy.l3d.yt
-    - l3d@mobile.l3d.yt
-    - l3d@pinkie.l3d.yt
-    - l3d@business.wingcon.com
-
-admins:
-  - l3d
-
-accounts:
-  - l3d
-
 ssh_public_key_store: 'admin_ssh_keys'
 home_sweet_home: false
 # i3wm config:
