@@ -7,9 +7,6 @@
 [submodule "roles/dotfiles"]
 	path = roles/dotfiles
 	url = https://github.com/DO1JLR/role_dotfiles.git
-[submodule "roles/firefox"]
-	path = roles/firefox
-	url = https://github.com/maxbachmann-ansible/role-firefox.git
 [submodule "roles/pulseaudio"]
 	path = roles/pulseaudio
 	url = https://github.com/DO1JLR/role_pulseaudio_archlinux.git

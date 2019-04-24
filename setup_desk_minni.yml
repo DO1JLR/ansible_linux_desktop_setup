@@ -1,0 +1,75 @@
+---
+
+- name: Install useful packages
+  hosts: desk_minni
+  tags: 
+  - packages
+  - updates
+  - setup
+  roles:
+    - workstation_packages
+
+- name: enable and secure sshd
+  hosts: desk_minni
+  tags: 
+  - secure
+  - ssh
+  - setup
+  roles:
+    - authorized_keys
+    - sshd
+
+- name: Install useful dotfiles
+  hosts: desk_minni
+  tags: 
+  - setup
+  roles:
+    - dotfiles
+
+- name: set akku warning
+  hosts: desk_minni
+  tags: 
+  - setup
+  - akku
+  roles:
+    - akku-warning
+
+- name: install modules for sound and bluetooth
+  hosts: desk_minni
+  tags:
+  - setup
+  - pulseaudio
+  - networkmanager
+  roles:
+    - pulseaudio
+    - networkmanager
+
+- name: Install useful packages
+  hosts: desk_minni
+  tags: 
+  - packages
+  - i3wm
+  roles:
+    - copy_files
+    - i3wm
+    - ntp
+
+- name: install nextcloud-client
+  hosts: desk_minni
+  tags:
+  - setup
+  - nextcloud
+  roles:
+    - nextcloud
+
+- name: install some arch fonts
+  hosts: desk_minni
+  tags:
+  - arch
+  - font
+  - fonts
+  - schrift
+  roles:
+   - arch-fonts
+
+

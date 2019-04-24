@@ -1,7 +1,7 @@
 ---
 
 - name: Install useful packages
-  hosts: thinkpad
+  hosts: t460p
   tags: 
   - packages
   - updates
@@ -10,7 +10,7 @@
     - workstation_packages
 
 - name: enable and secure sshd
-  hosts: thinkpad
+  hosts: t460p
   tags: 
   - secure
   - ssh
@@ -20,14 +20,14 @@
     - sshd
 
 - name: Install useful dotfiles
-  hosts: thinkpad
+  hosts: t460p
   tags: 
   - setup
   roles:
     - dotfiles
 
 - name: set akku warning
-  hosts: thinkpad
+  hosts: t460p
   tags: 
   - setup
   - akku
@@ -36,7 +36,7 @@
 
 
 - name: install modules for sound and bluetooth
-  hosts: thinkpad
+  hosts: t460p
   tags:
   - setup
   - pulseaudio
@@ -46,7 +46,7 @@
     - networkmanager
 
 #- name: improve firefox configuration
-#  hosts: thinkpad
+#  hosts: t460p
 #  tags:
 #  - setup
 #  - firefox
@@ -55,7 +55,7 @@
 
 
 - name: Install useful packages
-  hosts: thinkpad
+  hosts: t460p
   tags: 
   - packages
   - i3wm
@@ -65,7 +65,7 @@
     - ntp
 
 - name: install nextcloud-client
-  hosts: thinkpad
+  hosts: t460p
   tags:
   - setup
   - nextcloud
@@ -73,7 +73,7 @@
     - nextcloud
 
 - name: install some arch fonts
-  hosts: thinkpad
+  hosts: t460p
   tags:
   - arch
   - font

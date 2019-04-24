@@ -1,0 +1,85 @@
+---
+
+- name: Install useful packages
+  hosts: l460
+  tags: 
+  - packages
+  - updates
+  - setup
+  roles:
+    - workstation_packages
+
+- name: enable and secure sshd
+  hosts: l460
+  tags: 
+  - secure
+  - ssh
+  - setup
+  roles:
+    - authorized_keys
+    - sshd
+
+- name: Install useful dotfiles
+  hosts: l460
+  tags: 
+  - setup
+  roles:
+    - dotfiles
+
+- name: set akku warning
+  hosts: l460
+  tags: 
+  - setup
+  - akku
+  roles:
+    - akku-warning
+
+
+- name: install modules for sound and bluetooth
+  hosts: l460
+  tags:
+  - setup
+  - pulseaudio
+  - networkmanager
+  roles:
+    - pulseaudio
+    - networkmanager
+
+#- name: improve firefox configuration
+#  hosts: l460
+#  tags:
+#  - setup
+#  - firefox
+#  roles:
+#    - firefox
+
+
+- name: Install useful packages
+  hosts: l460
+  tags: 
+  - packages
+  - i3wm
+  roles:
+    - copy_files
+    - i3wm
+    - ntp
+
+- name: install nextcloud-client
+  hosts: l460
+  tags:
+  - setup
+  - nextcloud
+  roles:
+    - nextcloud
+
+- name: install some arch fonts
+  hosts: l460
+  tags:
+  - arch
+  - font
+  - fonts
+  - schrift
+  roles:
+   - arch-fonts
+
+
