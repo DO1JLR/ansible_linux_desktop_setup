@@ -31,3 +31,6 @@
 [submodule "roles/akku-warning"]
 	path = roles/akku-warning
 	url = https://github.com/DO1JLR/role_akku_warning.git
+[submodule "roles/install-firefox"]
+	path = roles/install-firefox
+	url = https://github.com/DO1JLR/role-firefox-installation.git

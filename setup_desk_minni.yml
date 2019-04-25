@@ -54,6 +54,17 @@
     - i3wm
     - ntp
 
+- name: install some arch fonts
+  hosts: desk_minni
+  tags:
+  - arch
+  - firefox
+  - browser
+  - install-firefox
+  roles:
+   - install-firefox
+
+
 - name: install nextcloud-client
   hosts: desk_minni
   tags:
