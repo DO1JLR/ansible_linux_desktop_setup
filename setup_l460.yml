@@ -34,7 +34,6 @@
   roles:
     - akku-warning
 
-
 - name: install modules for sound and bluetooth
   hosts: l460
   tags:
@@ -45,14 +44,15 @@
     - pulseaudio
     - networkmanager
 
-#- name: improve firefox configuration
-#  hosts: l460
-#  tags:
-#  - setup
-#  - firefox
-#  roles:
-#    - firefox
-
+- name: install some arch fonts
+  hosts: l460
+  tags:
+  - arch
+  - firefox
+  - browser
+  - install-firefox
+  roles:
+   - install-firefox
 
 - name: Install useful packages
   hosts: l460

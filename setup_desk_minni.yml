@@ -64,7 +64,6 @@
   roles:
    - install-firefox
 
-
 - name: install nextcloud-client
   hosts: desk_minni
   tags:
