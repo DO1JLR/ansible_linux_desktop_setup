@@ -53,7 +53,7 @@
     - copy_files
     - i3wm
     - ntp
-
+    - xrandr
 - name: install some arch fonts
   hosts: desk_minni
   tags:
@@ -81,5 +81,13 @@
   - schrift
   roles:
    - arch-fonts
+
+- name: install openvpn
+  hosts: desk_minni
+  tags:
+  - vpn
+  - openvpn
+  roles:
+   - openvpn
 
 

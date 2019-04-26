@@ -63,6 +63,7 @@
     - copy_files
     - i3wm
     - ntp
+    - xrandr
 
 - name: install nextcloud-client
   hosts: t460p

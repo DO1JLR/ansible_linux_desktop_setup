@@ -34,3 +34,6 @@
 [submodule "roles/install-firefox"]
 	path = roles/install-firefox
 	url = https://github.com/DO1JLR/role-firefox-installation.git
+[submodule "roles/xrandr"]
+	path = roles/xrandr
+	url = https://github.com/DO1JLR/role-xrandr.git
