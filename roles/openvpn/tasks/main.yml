@@ -17,6 +17,16 @@
     state: present
   when: ansible_os_family == 'Archlinux'
 
+- name: Install OpenVPN all
+  become: yes
+  package:
+    name: 
+      - openvpn
+      - bridge-utils
+      - easy-rsa
+    state: present
+  when: ansible_os_family != 'Archlinux'
+
 - name: Add the tun module
   become: yes
   modprobe:
