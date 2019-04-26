@@ -1,6 +1,8 @@
 ---
+# some ssh role parameters
 ssh_public_key_store: 'admin_ssh_keys'
 home_sweet_home: false
+install_keychain: true
 # i3wm config:
 
 i3_packages_extra:

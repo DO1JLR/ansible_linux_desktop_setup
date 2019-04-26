@@ -1,0 +1,31 @@
+---
+
+- name: Run the equivalent of "pacman -Syu" as a separate step
+  become: yes
+  pacman:
+    update_cache: yes
+    upgrade: yes
+  when: ansible_os_family == 'Archlinux'
+
+- name: Install OpenVPN for ArchLinux
+  become: yes
+  pacman:
+    name: 
+      - openvpn
+      - bridge-utils
+      - easy-rsa
+    state: present
+  when: ansible_os_family == 'Archlinux'
+
+- name: Add the tun module
+  become: yes
+  modprobe:
+    name: tun
+    state: present
+
+- name: Add the bridge module
+  become: yes
+  modprobe:
+    name: bridge
+    state: present
+
