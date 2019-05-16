@@ -12,7 +12,7 @@ My Ansible Setup for my Lenovo Thinkpad.
 -----------------------
 ```bash
 # Clone Git
-git clone https://github.com/DO1JLR/ansible_thinkpad_setup.git ansible_thinkpad_setup
+git clone --recursive https://github.com/DO1JLR/ansible_thinkpad_setup.git ansible_thinkpad_setup
 cd ansible_thinkpad_setup
 
 # Download needed submodules
