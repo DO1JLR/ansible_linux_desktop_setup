@@ -6,6 +6,7 @@
   - packages
   - updates
   - setup
+  - workstation_packages
   roles:
     - workstation_packages
 
