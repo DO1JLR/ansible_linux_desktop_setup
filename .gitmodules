@@ -1,6 +1,6 @@
 [submodule "roles/workstation_packages"]
 	path = roles/workstation_packages
-	url = https://github.com/DO1JLR/role_install_workstaton_packages.git
+	url = https://github.com/cahos-bodnesee/role_install_workstaton_packages.git
 [submodule "roles/i3wm"]
 	path = roles/i3wm
 	url = https://github.com/DO1JLR/ansible-role-i3wm.git
@@ -18,7 +18,7 @@
 	url = https://gitea.see-base.de/toolbox/ssh-public-keys.git
 [submodule "roles/sshd"]
 	path = roles/sshd
-	url = https://github.com/DO1JLR/role_sshd.git
+	url = https://github.com/chaos-bodensee/role_sshd.git
 [submodule "roles/nextcloud"]
 	path = roles/nextcloud
 	url = https://github.com/DO1JLR/role_nextcloud_client.git
@@ -36,4 +36,4 @@
 	url = https://github.com/DO1JLR/role-firefox-installation.git
 [submodule "roles/xrandr"]
 	path = roles/xrandr
-	url = https://github.com/DO1JLR/role-xrandr.git
+	url = https://github.com/chaos-bodensee/role-xrandr.git

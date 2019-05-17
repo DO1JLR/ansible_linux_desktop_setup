@@ -50,6 +50,10 @@
   tags: 
   - packages
   - i3wm
+  - copy_files
+  - i3wm
+  - ntp
+  - xrandr
   roles:
     - copy_files
     - i3wm
