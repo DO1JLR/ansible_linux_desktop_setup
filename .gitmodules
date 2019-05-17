@@ -6,10 +6,10 @@
 	url = https://github.com/DO1JLR/ansible-role-i3wm.git
 [submodule "roles/dotfiles"]
 	path = roles/dotfiles
-	url = https://github.com/DO1JLR/role_dotfiles.git
+	url = https://github.com/chaos-bodensee/role_dotfiles.git
 [submodule "roles/pulseaudio"]
 	path = roles/pulseaudio
-	url = https://github.com/DO1JLR/role_pulseaudio_archlinux.git
+	url = https://github.com/chaos-bodensee/role_pulseaudio_archlinux.git
 [submodule "roles/authorized_keys"]
 	path = roles/authorized_keys
 	url = https://github.com/ffbsee/role-ssh_authorized_keys.git
@@ -30,7 +30,7 @@
 	url = https://github.com/DO1JLR/role-arch-fonts.git
 [submodule "roles/akku-warning"]
 	path = roles/akku-warning
-	url = https://github.com/DO1JLR/role_akku_warning.git
+	url = https://github.com/chaos-bodensee/role_akku_warning.git
 [submodule "roles/install-firefox"]
 	path = roles/install-firefox
 	url = https://github.com/DO1JLR/role-firefox-installation.git
