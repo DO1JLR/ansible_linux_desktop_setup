@@ -1,4 +1,7 @@
 ---
+- include_tasks: versioncheck.yml
+  when: submodules_versioncheck|bool
+
 - name: install needed packages on arch
   become: yes
   pacman:

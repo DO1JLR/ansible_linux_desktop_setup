@@ -3,7 +3,7 @@
 	url = https://github.com/cahos-bodnesee/role_install_workstaton_packages.git
 [submodule "roles/i3wm"]
 	path = roles/i3wm
-	url = https://github.com/DO1JLR/ansible-role-i3wm.git
+	url = https://github.com/chaos-bodensee/ansible-role-i3wm.git
 [submodule "roles/dotfiles"]
 	path = roles/dotfiles
 	url = https://github.com/chaos-bodensee/role_dotfiles.git
@@ -33,7 +33,7 @@
 	url = https://github.com/chaos-bodensee/role_akku_warning.git
 [submodule "roles/install-firefox"]
 	path = roles/install-firefox
-	url = https://github.com/DO1JLR/role-firefox-installation.git
+	url = https://github.com/chaos-bodnesee/role-firefox-installation.git
 [submodule "roles/xrandr"]
 	path = roles/xrandr
 	url = https://github.com/chaos-bodensee/role-xrandr.git
