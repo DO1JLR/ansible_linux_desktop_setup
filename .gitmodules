@@ -27,7 +27,7 @@
 	url = https://github.com/chaos-bodensee/role-ntp.git
 [submodule "roles/arch-fonts"]
 	path = roles/arch-fonts
-	url = https://github.com/DO1JLR/role-arch-fonts.git
+	url = https://github.com/chaos-bodensee/role-arch-fonts.git
 [submodule "roles/akku-warning"]
 	path = roles/akku-warning
 	url = https://github.com/chaos-bodensee/role_akku_warning.git
