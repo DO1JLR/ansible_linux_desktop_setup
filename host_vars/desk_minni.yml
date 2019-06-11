@@ -21,3 +21,19 @@ accounts:
 akku_user: "lilian"
 
 copy_to_user: "{{ akku_user }}"
+
+i3_monitors:
+  - monitor:
+    id: 1
+    output: "DP1"
+    mode: "2560x1440"
+    pos: "0x0"
+    rotate: "normal"
+    workspaces: [1,2,3,4,5,6]
+  - monitor:
+    id: 2
+    output: "HDMI2"
+    mode: "1920x1080"
+    pos: "2560x0"
+    rotate: "left"
+    workspaces: [7,8,9,0]
