@@ -33,7 +33,7 @@ i3_monitors:
   - monitor:
     id: 2
     output: "HDMI2"
-    mode: "1920x1080"
+    mode: "1920x1200"
     pos: "2560x0"
     rotate: "normal"
     workspaces: [6,7,8,9,0]
