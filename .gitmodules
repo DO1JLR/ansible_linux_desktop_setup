@@ -37,3 +37,6 @@
 [submodule "roles/xrandr"]
 	path = roles/xrandr
 	url = https://github.com/chaos-bodensee/role-xrandr.git
+[submodule "roles/winehq"]
+	path = roles/winehq
+	url = https://github.com/ekultails/ansible_role_wine.git

@@ -19,5 +19,6 @@ accounts:
   - lilian
 
 akku_user: "lilian"
-
+wine_user: "lilian"
+wine_user_home: "/home/lilian"
 copy_to_user: "{{ akku_user }}"
