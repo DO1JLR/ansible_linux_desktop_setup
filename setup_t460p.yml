@@ -1,5 +1,4 @@
 ---
-
 - name: Install useful packages
   hosts: t460p
   tags: 
@@ -85,7 +84,6 @@
 
 - name: install winehq
   hosts: t460p
-  become: true
   tags:
   - wine
   - winehq

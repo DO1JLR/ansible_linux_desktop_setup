@@ -37,3 +37,7 @@ i3_monitors:
     pos: "2560x0"
     rotate: "normal"
     workspaces: [6,7,8,9,0]
+
+wine_user: "lilian"
+host_vars/l460.yml:wine_user_home: "/home/lilian"
+
