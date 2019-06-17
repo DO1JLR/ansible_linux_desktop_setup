@@ -83,4 +83,12 @@
   roles:
    - arch-fonts
 
+- name: install winehq
+  hosts: t460p
+  become: true
+  tags:
+  - wine
+  - winehq
+  roles:
+   - winehq
 

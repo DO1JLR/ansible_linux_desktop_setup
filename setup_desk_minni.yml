@@ -95,4 +95,11 @@
   roles:
    - openvpn
 
-
+- name: install winehq
+  hosts: desk_minni
+  become: true
+  tags:
+  - wine
+  - winehq
+  roles:
+   - winehq
