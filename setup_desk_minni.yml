@@ -102,3 +102,12 @@
   - winehq
   roles:
    - winehq
+
+- name: disable sleeping
+  hosts: desk_minni
+  tags:
+  - sleep
+  - suspend
+  - no-sleep
+  roles:
+   - no-sleep

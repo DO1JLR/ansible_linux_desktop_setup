@@ -90,3 +90,11 @@
   roles:
    - winehq
 
+- name: disable sleeping
+  hosts: t460p
+  tags:
+  - sleep
+  - suspend
+  - no-sleep
+  roles:
+   - no-sleep

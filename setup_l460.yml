@@ -1,5 +1,4 @@
 ---
-
 - name: Install useful packages
   hosts: l460
   tags: 
@@ -90,3 +89,12 @@
   - winehq
   roles:
    - winehq
+
+- name: disable sleeping
+  hosts: l460
+  tags:
+  - sleep
+  - suspend
+  - no-sleep
+  roles:
+   - no-sleep
