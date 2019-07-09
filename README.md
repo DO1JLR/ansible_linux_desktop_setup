@@ -1,6 +1,6 @@
  Ansible Linux Desktop Setup
 ==========================
-This ansible playbook collection creates [L3D](https://chaos.social)s Desktop enviroment. Including window manager and some pre-installed programms like [Firefox](https://www.mozilla.org/de/firefox/new/) and some usefull shell programms.
+This ansible playbook collection creates [L3D](https://chaos.social/@l3d)s Desktop enviroment. Including window manager and some pre-installed programms like [Firefox](https://www.mozilla.org/de/firefox/new/) and some usefull shell programms.
 
  What is happening here exactly?
 --------------------------------
