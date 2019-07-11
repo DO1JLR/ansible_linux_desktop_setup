@@ -44,7 +44,7 @@
     - networkmanager
 
 - name: install some arch fonts
-  hosts: t660p
+  hosts: t460p
   tags:
   - arch
   - firefox
