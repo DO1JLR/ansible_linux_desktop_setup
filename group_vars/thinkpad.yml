@@ -29,7 +29,7 @@ i3_keybindings_extra:
   - keybinding:
     name: volume-up
     key: XF86AudioRaiseVolume
-    exec: --no-startup-id pulsemixer --change-volume +4
+    exec: --no-startup-id pulsemixer --change-volume +3
   - keybinding:
     name: volume-down
     key: XF86AudioLowerVolume
@@ -41,16 +41,16 @@ i3_keybindings_extra:
   - keybinding:
     name: darker
     key: XF86MonBrightnessDown
-    exec: --no-startup-id light -U 12
+    exec: --no-startup-id light -U 9
   - keybinding:
     name: lighter
     key: XF86MonBrightnessUp
-    exec: --no-startup-id light -A 9
+    exec: --no-startup-id light -A 6
 
 
 i3_applications:
   - application:
-    class: "Firefox"
+    class: "firefox"
     name: "firefox"
     workspace: 2
     on_startup: true
