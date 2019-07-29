@@ -74,3 +74,6 @@ i3lock_options: "i3lock --image=/home/{{ user }}/.config/lockscreen.png --color 
 
 install_and_enable_cronie: true
 
+# enable xtra aliases in basrc
+git_pull_alias: true
+git_typo_alias: true
