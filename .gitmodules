@@ -33,7 +33,7 @@
 	url = https://github.com/chaos-bodensee/role_akku_warning.git
 [submodule "roles/install-firefox"]
 	path = roles/install-firefox
-	url = https://github.com/chaos-bodnesee/role-firefox-installation.git
+	url = https://github.com/chaos-bodensee/role-firefox-installation.git
 [submodule "roles/xrandr"]
 	path = roles/xrandr
 	url = https://github.com/chaos-bodensee/role-xrandr.git
