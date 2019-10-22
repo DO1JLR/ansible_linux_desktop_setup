@@ -30,6 +30,7 @@
   tags: 
   - setup
   - akku
+  - akku-warning
   roles:
     - akku-warning
 
