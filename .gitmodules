@@ -43,3 +43,6 @@
 [submodule "roles/no-sleep"]
 	path = roles/no-sleep
 	url = https://github.com/chaos-bodensee/role_disable_sleep.git
+[submodule "roles/manage_users"]
+	path = roles/manage_users
+	url = https://github.com/chaos-bodensee/role-manage_users.git

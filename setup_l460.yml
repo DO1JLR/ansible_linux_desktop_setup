@@ -15,6 +15,7 @@
   - ssh
   - setup
   roles:
+    - manage_users
     - authorized_keys
     - sshd
 
