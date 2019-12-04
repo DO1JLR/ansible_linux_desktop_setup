@@ -1,6 +1,6 @@
 [submodule "roles/workstation_packages"]
 	path = roles/workstation_packages
-	url = https://github.com/cahos-bodnesee/role_install_workstaton_packages.git
+	url = https://github.com/chaos-bodensee/role_install_workstaton_packages.git
 [submodule "roles/i3wm"]
 	path = roles/i3wm
 	url = https://github.com/chaos-bodensee/ansible-role-i3wm.git
