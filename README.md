@@ -2,6 +2,15 @@
 ==========================
 This ansible playbook collection creates [L3D](https://chaos.social/@l3d)s Desktop enviroment. Including window manager and some pre-installed programms like [Firefox](https://www.mozilla.org/de/firefox/new/) and some usefull shell programms.
 
+ ATTENTION
+-------------
+Different to my other ansible playbooks:
+
+### THIS PLAYBOOK HAS TO BE EXECUTET AT THE TARGET HOST DIRECTLY!
+
+*It requires some GUI stuff and I did not find the time to forward X or wayland correctly to make it remotely working. Sorry. Feel free to create a Issue or pull-request*
+
+
  What is happening here exactly?
 --------------------------------
 For a complete overview please have a look at the ``README.md`` Files from each ansible role.

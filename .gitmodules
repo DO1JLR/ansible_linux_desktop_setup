@@ -46,3 +46,6 @@
 [submodule "roles/manage_users"]
 	path = roles/manage_users
 	url = https://github.com/chaos-bodensee/role-manage_users.git
+[submodule "roles/polybar"]
+	path = roles/polybar
+	url = https://github.com/chaos-bodensee/role_install-polybar.git
