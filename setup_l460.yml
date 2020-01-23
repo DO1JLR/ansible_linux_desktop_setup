@@ -1,4 +1,12 @@
 ---
+- name: check if ansible is not to old
+  hosts: localhost
+  tags:
+   - default
+  roles:
+    - ansible_version
+  gather_facts: no
+
 - name: Install useful packages
   hosts: l460
   tags: 

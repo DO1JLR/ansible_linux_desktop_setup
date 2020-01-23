@@ -49,3 +49,6 @@
 [submodule "roles/polybar"]
 	path = roles/polybar
 	url = https://github.com/chaos-bodensee/role_install-polybar.git
+[submodule "roles/ansible_version"]
+	path = roles/ansible_version
+	url = https://github.com/chaos-bodensee/role-ansible_version.git
