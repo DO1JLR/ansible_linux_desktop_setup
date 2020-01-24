@@ -77,3 +77,6 @@ install_and_enable_cronie: true
 # enable xtra aliases in basrc
 git_pull_alias: true
 git_typo_alias: true
+
+# debug f00
+print_os_vars: true
