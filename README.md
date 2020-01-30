@@ -10,6 +10,14 @@ Different to my other ansible playbooks:
 
 *It requires some GUI stuff and I did not find the time to forward X or wayland correctly to make it remotely working. Sorry. Feel free to create a Issue or pull-request*
 
+<!-- ansible pacman module error?
+There is an open issue about this! https://github.com/ansible/ansible/issues/63077
+
+Dirtifix:
+
+sudo wget -O /usr/lib/python3.8/site-packages/ansible/modules/packaging/os/pacman.py https://raw.githubusercontent.com/ansible/ansible/v2.8.6/lib/ansible/modules/packaging/os/pacman.py
+
+-->
 
  What is happening here exactly?
 --------------------------------
