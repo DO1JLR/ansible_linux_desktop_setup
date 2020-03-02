@@ -80,3 +80,5 @@ git_typo_alias: true
 
 # debug f00
 print_os_vars: true
+
+extra_bashrc: "alias dd='dd bs=4M status=progress oflag=dsync'"
