@@ -18,7 +18,9 @@ admins_ssh_root_prefix:
 accounts:
   - lilian
 
-akku_user: "lilian"
+akku_warning:
+  user: "lilian"
+  script_dest: '/tmp/x.sh'
 
 copy_to_user: "{{ akku_user }}"
 

@@ -30,7 +30,7 @@
 	url = https://github.com/chaos-bodensee/role-arch-fonts.git
 [submodule "roles/akku-warning"]
 	path = roles/akku-warning
-	url = https://github.com/chaos-bodensee/role_akku_warning.git
+	url = https://github.com/roles-ansible/role_akku_warning.git
 [submodule "roles/install-firefox"]
 	path = roles/install-firefox
 	url = https://github.com/chaos-bodensee/role-firefox-installation.git
