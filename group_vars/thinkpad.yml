@@ -14,7 +14,6 @@ i3_packages_extra:
   - asciinema
   - mtr
   - evince
-  - libreoffice
   - speedtest-cli
 
 i3_keybindings_extra:
