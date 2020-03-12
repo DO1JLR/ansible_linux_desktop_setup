@@ -31,6 +31,7 @@
   hosts: t460p
   tags: 
   - setup
+  - dotfiles
   roles:
     - dotfiles
 
