@@ -71,6 +71,9 @@ cd ansible_thinkpad_setup
 
 # Download needed submodules
 git submodule update --init --recursive
+
+# make sure you always check out the submodules
+git config --global submodule.recurse true
 ```
 
  Which playbook?
