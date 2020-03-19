@@ -36,7 +36,7 @@ i3_keybindings_extra:
   - keybinding:
     name: darker
     key: XF86AudioMute
-    exec: --no-startup-id pulsemixer --toggle-mute 
+    exec: --no-startup-id pulsemixer --toggle-mute
   - keybinding:
     name: darker
     key: XF86MonBrightnessDown

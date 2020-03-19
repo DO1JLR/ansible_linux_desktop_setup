@@ -20,5 +20,5 @@ akku_user: "l3d"
 copy_to_user: "{{ akku_user }}"
 
 wine_user: "{{ akku_user }}"
-host_vars/l460.yml:wine_user_home: "/home/{{ akku_user }}"
-
+wine_user_home: "/home/{{ akku_user }}"
+copy_to_user: "{{ akku_user }}"

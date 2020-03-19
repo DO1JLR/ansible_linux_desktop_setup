@@ -42,6 +42,5 @@ i3_monitors:
 
 wine_user: "lilian"
 akku_user: "lilian"
-
-host_vars/l460.yml:wine_user_home: "/home/lilian"
+wine_user_home: "/home/lilian"
 
