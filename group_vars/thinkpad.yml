@@ -81,3 +81,4 @@ git_typo_alias: true
 print_os_vars: true
 
 extra_bashrc: "alias dd='dd bs=4M status=progress oflag=dsync'"
+temporarily_disable_screensaver: false
