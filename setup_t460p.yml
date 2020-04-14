@@ -9,7 +9,7 @@
 
 - name: Install useful packages
   hosts: t460p
-  tags: 
+  tags:
   - packages
   - updates
   - setup
@@ -18,7 +18,7 @@
 
 - name: enable and secure sshd
   hosts: t460p
-  tags: 
+  tags:
   - secure
   - ssh
   - setup
@@ -29,7 +29,7 @@
 
 - name: Install useful dotfiles
   hosts: t460p
-  tags: 
+  tags:
   - setup
   - dotfiles
   roles:
@@ -37,7 +37,7 @@
 
 - name: set akku warning
   hosts: t460p
-  tags: 
+  tags:
   - setup
   - akku
   - akku-warning
@@ -66,7 +66,7 @@
 
 - name: Install useful packages
   hosts: t460p
-  tags: 
+  tags:
   - packages
   - i3wm
   roles:
@@ -74,6 +74,15 @@
     - i3wm
     - ntp
     - xrandr
+
+- name: OVPN
+  hosts: t460p
+  tags:
+    - vpn
+    - ovpn
+    - openvpn
+  roles:
+    - openvpn
 
 - name: install nextcloud-client
   hosts: t460p
