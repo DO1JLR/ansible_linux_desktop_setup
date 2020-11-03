@@ -6,6 +6,9 @@ install_keychain: true
 # i3wm config:
 enable_lock_after_time: true
 
+base__additional_user_bashrc_lines:
+  - eval $(keychain --eval --quiet id_ed25519)
+
 i3_packages_extra:
   - ranger
   - light
