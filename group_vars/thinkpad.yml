@@ -3,8 +3,8 @@
 # roles/dotfiles
 #
 # enable keychain as ssh agent
-dotfiles__additional_user_bashrc_lines: []
-  - eval $(keychain --eval --quiet id_ed25519)
+dotfiles__additional_user_bashrc_lines:
+ - eval $(keychain --eval --quiet id_ed25519)
 
 
 
