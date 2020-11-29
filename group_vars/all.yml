@@ -1,0 +1,4 @@
+---
+# globaly enably simple versionscheck - if available
+submodules_versioncheck: true
+

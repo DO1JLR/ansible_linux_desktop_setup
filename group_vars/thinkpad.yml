@@ -1,4 +1,15 @@
 ---
+#
+# roles/dotfiles
+#
+# enable keychain as ssh agent
+dotfiles__additional_user_bashrc_lines: []
+  - eval $(keychain --eval --quiet id_ed25519)
+
+
+
+# legacy, maybe used
+
 # some ssh role parameters
 ssh_public_key_store: 'admin_ssh_keys'
 home_sweet_home: false
