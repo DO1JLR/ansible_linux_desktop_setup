@@ -8,6 +8,10 @@ dotfiles__additional_user_bashrc_lines:
 
 
 
+
+
+
+
 # legacy, maybe used
 
 # some ssh role parameters
@@ -97,3 +101,8 @@ print_os_vars: true
 install_pass_as_password_manager: true
 extra_bashrc: "alias dd='dd bs=4M status=progress oflag=dsync'"
 temporarily_disable_screensaver: false
+
+sshd__key_types:
+  - 'ed25519'
+  - 'rsa'
+  - 'ecdsa'
