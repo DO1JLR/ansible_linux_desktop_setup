@@ -3,13 +3,14 @@
   hosts: localhost
   tags:
    - default
+   - always
   roles:
     - ansible_version
   gather_facts: no
 
 - name: Install useful packages
   hosts: l460
-  tags: 
+  tags:
   - packages
   - updates
   - setup
@@ -18,7 +19,7 @@
 
 - name: enable and secure sshd
   hosts: l460
-  tags: 
+  tags:
   - secure
   - ssh
   - setup
@@ -29,14 +30,14 @@
 
 - name: Install useful dotfiles
   hosts: l460
-  tags: 
+  tags:
   - setup
   roles:
     - dotfiles
 
 - name: set akku warning
   hosts: l460
-  tags: 
+  tags:
   - setup
   - akku
   roles:

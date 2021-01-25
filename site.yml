@@ -3,6 +3,7 @@
   hosts: localhost
   tags:
    - default
+   - always
   roles:
     - ansible_version
   gather_facts: no
