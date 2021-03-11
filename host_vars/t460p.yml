@@ -21,4 +21,3 @@ copy_to_user: "{{ akku_user }}"
 
 wine_user: "{{ akku_user }}"
 wine_user_home: "/home/{{ akku_user }}"
-copy_to_user: "{{ akku_user }}"

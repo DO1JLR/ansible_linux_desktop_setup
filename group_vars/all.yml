@@ -23,55 +23,50 @@ dotfiles__additional_user_bashrc_lines:
 ssh_public_key_store: 'admin_ssh_keys'
 
 i3_keybindings_extra:
-  - keybinding:
-    name: Volume (mute/unmute)
-    key: $mod+F12
-    exec: --no-startup-id pulsemixer --toggle-mute
-  - keybinding:
-    name: Volue (default)
-    key: $mod+Shift+F12
-    exec: --no-startup-id pulsemixer --set-volume 42
-  - keybinding:
-    name: volume-up
-    key: XF86AudioRaiseVolume
-    exec: --no-startup-id pulsemixer --change-volume +3
-  - keybinding:
-    name: volume-down
-    key: XF86AudioLowerVolume
-    exec: --no-startup-id pulsemixer --change-volume -5
-  - keybinding:
-    name: darker
-    key: XF86AudioMute
-    exec: --no-startup-id pulsemixer --toggle-mute
-  - keybinding:
-    name: darker
-    key: XF86MonBrightnessDown
-    exec: --no-startup-id sudo light -U 9
-  - keybinding:
-    name: lighter
-    key: XF86MonBrightnessUp
-    exec: --no-startup-id sudo light -A 6
-
+ - keybinding:
+   name: Volume (mute/unmute)
+   key: $mod+F12
+   exec: --no-startup-id pulsemixer --toggle-mute
+ - keybinding:
+   name: Volue (default)
+   key: $mod+Shift+F12
+   exec: --no-startup-id pulsemixer --set-volume 42
+ - keybinding:
+   name: volume-up
+   key: XF86AudioRaiseVolume
+   exec: --no-startup-id pulsemixer --change-volume +3
+ - keybinding:
+   name: volume-down
+   key: XF86AudioLowerVolume
+   exec: --no-startup-id pulsemixer --change-volume -5
+ - keybinding:
+   name: darker
+   key: XF86AudioMute
+   exec: --no-startup-id pulsemixer --toggle-mute
+ - keybinding:
+   name: darker
+   key: XF86MonBrightnessDown
+   exec: --no-startup-id sudo light -U 9
+ - keybinding:
+   name: lighter
+   key: XF86MonBrightnessUp
+   exec: --no-startup-id sudo light -A 6
 
 i3_applications:
-  - application:
-    class: "firefox"
-    name: "firefox"
-    workspace: 2
-    on_startup: true
-  - application:
-    class: "Thunderbird"
-    name: "thunderbird"
-    workspace: 9
-    on_startup: true
+ - application:
+   class: "firefox"
+   name: "firefox"
+   workspace: 2
+   on_startup: true
+ - application:
+   class: "Thunderbird"
+   name: "thunderbird"
+   workspace: 9
+   on_startup: true
 
 i3_run_on_startup:
-#  - nextcloud
-  - sudo nm-applet
-
-
-
+ # - nextcloud
+ - sudo nm-applet
 
 # globaly enably simple versionscheck - if available
 submodules_versioncheck: true
-
