@@ -18,7 +18,7 @@
 	url = https://gitea.see-base.de/toolbox/ssh-public-keys.git
 [submodule "roles/sshd"]
 	path = roles/sshd
-	url = https://github.com/chaos-bodensee/role_sshd.git
+	url = https://github.com/roles-ansible/ansible_role_sshd.git
 [submodule "roles/nextcloud"]
 	path = roles/nextcloud
 	url = https://github.com/DO1JLR/role_nextcloud_client.git
