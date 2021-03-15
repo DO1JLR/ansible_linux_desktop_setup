@@ -10,57 +10,7 @@ Different to my other ansible playbooks:
 
 *It requires some GUI stuff and I did not find the time to forward X or wayland correctly to make it remotely working. Sorry. Feel free to create a Issue or pull-request*
 
-<!-- ansible pacman module error?
-There is an open issue about this! https://github.com/ansible/ansible/issues/63077
-
-Dirtifix:
-
-sudo wget -O /usr/lib/python3.8/site-packages/ansible/modules/packaging/os/pacman.py https://raw.githubusercontent.com/ansible/ansible/v2.8.6/lib/ansible/modules/packaging/os/pacman.py
-
--->
-
- What is happening here exactly?
---------------------------------
-For a complete overview please have a look at the ``README.md`` Files from each ansible role.
-
-*alphabetical Order*
- + akku-warning:
-   - monitor akku charging in the background via cronjob
-   - create a popup if the akku is under 25%
- + arch-fonts:
-   - will install some fonts, if you are using arch linux
- + authorized_keys:
-   - Manage SSH Public Keys, Users and authorisation
- + dotfiles:
-   - Create some dotfiles like .vimrc and .bashrc
- + i3wm:
-   - install and configure i3 window manager
- + install-firefox:
-   - Install firefox including some plugins - if you are using arch
- + networkmanager:
-   - install NetworkManager including some requirements
- + nextcloud:
-   - install nextcloud-client (on arch)
- + no-sleep:
-   - didable suspend and screen saver
-   - install lock after time (optional)
- + ntp:
-   - it is about time!
- + openvpn:
-   - install some requirements to use openvpn
- + pulseaudio
-   - install pulseaudio with some requirements
- + steam:
-   - install steam client (incomplete)
- + winehq:
-   - install wine
- + workstation_paclages:
-   - install some office packages
-   - install some terminal packages
- + xrandr:
-   - install xrandr and arandr
-
- Install tipps:
+  Install tipps:
 -----------------------
 ```bash
 # Clone Git
