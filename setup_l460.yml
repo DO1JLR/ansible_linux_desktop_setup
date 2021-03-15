@@ -49,6 +49,7 @@
     - {role: pulseaudio, tags: [pulse, audio, pulseaudio], when: ansible_os_family == 'Archlinux'}
     - {role: networkmanager, tags: networkmanager, when: ansible_os_family == 'Archlinux'}
     - {role: nextcloud, tags: nextcloud, when: ansible_os_family == 'Archlinux'}
+    - {role: bat, tags: bat}
 
 - name: install some arch fonts
   hosts: l460
