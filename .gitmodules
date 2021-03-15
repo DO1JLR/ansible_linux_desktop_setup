@@ -15,7 +15,7 @@
 	url = https://github.com/ffbsee/role-ssh_authorized_keys.git
 [submodule "files/admin_ssh_keys"]
 	path = files/admin_ssh_keys
-	url = https://gitea.see-base.de/toolbox/ssh-public-keys.git
+	url = https://backwesen.de/ansible/ssh_public_keys.git
 [submodule "roles/sshd"]
 	path = roles/sshd
 	url = https://github.com/roles-ansible/ansible_role_sshd.git
