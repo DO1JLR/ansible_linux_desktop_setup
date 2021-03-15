@@ -41,3 +41,6 @@ install_pass_as_password_manager: true
 extra_bashrc: "alias dd='dd bs=4M status=progress oflag=dsync'"
 temporarily_disable_screensaver: false
 modify_lightdm: false
+
+# ingore warning temporarily
+warn_if_role_pulseaudio_is_not_tested_well: false

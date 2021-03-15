@@ -46,7 +46,7 @@
 - name: install modules for sound and bluetooth
   hosts: l460
   roles:
-    - {role: pulseaudio, tags: [pulse, audio, pulseaudio], when: ansible_os_family == 'Archlinux'}
+    - {role: pulseaudio, tags: [pulse, audio, pulseaudio]}
     - {role: networkmanager, tags: networkmanager, when: ansible_os_family == 'Archlinux'}
     - {role: nextcloud, tags: nextcloud, when: ansible_os_family == 'Archlinux'}
     - {role: bat, tags: bat, when: ansible_os_family == 'Debian'}
