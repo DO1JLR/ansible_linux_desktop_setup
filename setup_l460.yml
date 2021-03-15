@@ -48,6 +48,7 @@
   roles:
     - {role: pulseaudio, tags: [pulse, audio, pulseaudio], when: ansible_os_family == 'Archlinux'}
     - {role: networkmanager, tags: networkmanager, when: ansible_os_family == 'Archlinux'}
+    - {role: nextcloud, tags: nextcloud, when: ansible_os_family == 'Archlinux'}
 
 - name: install some arch fonts
   hosts: l460
@@ -61,7 +62,7 @@
 
 - name: Install useful packages
   hosts: l460
-  tags: 
+  tags:
   - packages
   - i3wm
   roles:
@@ -69,14 +70,6 @@
     - i3wm
     - ntp
     - xrandr
-
-- name: install nextcloud-client
-  hosts: l460
-  tags:
-  - setup
-  - nextcloud
-  roles:
-    - nextcloud
 
 - name: install some arch fonts
   hosts: l460
