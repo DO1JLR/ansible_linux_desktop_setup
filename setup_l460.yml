@@ -84,6 +84,7 @@
 
 - name: install winehq
   hosts: l460
+  become: true
   tags:
   - wine
   - winehq
