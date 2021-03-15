@@ -45,13 +45,9 @@
 
 - name: install modules for sound and bluetooth
   hosts: l460
-  tags:
-  - setup
-  - pulseaudio
-  - networkmanager
   roles:
-    - pulseaudio
-    - networkmanager
+    - {role: pulseaudio, tags: [pulse, audio, pulseaudio], when: ansible_os_family == 'Archlinux'}
+    - {role: networkmanager, tags: networkmanager, when: ansible_os_family == 'Archlinux'}
 
 - name: install some arch fonts
   hosts: l460
