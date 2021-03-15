@@ -53,7 +53,7 @@
 	path = roles/ansible_version
 	url = https://github.com/chaos-bodensee/role-ansible_version.git
 [submodule "roles/base"]
-	path = roles/base
+	path = roles/do1jlr.base
 	url = https://github.com/roles-ansible/ansible_role_base.git
 [submodule "roles/bat"]
 	path = roles/bat
