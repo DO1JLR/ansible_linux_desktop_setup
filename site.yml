@@ -4,10 +4,10 @@
   roles:
     - {role: ansible_version, tags: always, gather_facts: false}
 
-- name: run base setup roles
+- name: run do1jlr.base setup roles
   hosts: localhost
   roles:
-    - {role: base, tags: [default, packages, base]}
+    - {role: do1jlr.base, tags: [default, packages, base]}
     - {role: workstation_packages, tags: [default, workstation_packages, packages, setup]}
     - {role: ntp, tags: ntp}
     - {role: arch-fonts, tags: [font, fonts, arch-fonts]}
