@@ -12,6 +12,9 @@ users:
 admins:
   - lilian
 
+base__additional_user_bashrc_lines:
+  - [[ $- == *i* ]] && eval $(keychain --eval --quiet id_ed25519)
+
 # used to automatically generate correct admin keys
 admins_ssh_root_prefix:
   - l3d
