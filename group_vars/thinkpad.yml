@@ -7,9 +7,6 @@ install_keychain: true
 # i3wm config:
 enable_lock_after_time: true
 
-base__additional_user_bashrc_lines:
-  - eval $(keychain --eval --quiet id_ed25519)
-
 i3_packages_extra:
   - ranger
   - light
@@ -19,7 +16,6 @@ i3_packages_extra:
   - mtr
   - evince
   - speedtest-cli
-
 
 i3_font_size: 11
 i3_focus_follows_mouse: true
