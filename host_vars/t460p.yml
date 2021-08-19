@@ -1,4 +1,8 @@
 ---
+avahi_packages:
+  - nss-mdns
+  - avahi
+
 # local user config:
 users:
   l3d:

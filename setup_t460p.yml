@@ -8,6 +8,11 @@
     - ansible_version
   gather_facts: no
 
+- name: avahi
+  hosts: t460p
+  roles:
+    - {role: avahi_daemon, tags: [avahi_daemon, avahi, mdns], become: true}
+
 - name: Install useful packages
   hosts: t460p
   tags:

@@ -58,3 +58,6 @@
 [submodule "roles/bat"]
 	path = roles/bat
 	url = https://github.com/gantsign/ansible_role_bat.git
+[submodule "roles/avahi_daemon"]
+	path = roles/avahi_daemon
+	url = git@git.ccczh.ch:ansible-roles/role-avahi_daemon.git
