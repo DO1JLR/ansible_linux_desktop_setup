@@ -61,3 +61,6 @@
 [submodule "roles/avahi_daemon"]
 	path = roles/avahi_daemon
 	url = git@git.ccczh.ch:ansible-roles/role-avahi_daemon.git
+[submodule "roles/amdgpu_firmware"]
+	path = roles/amdgpu_firmware
+	url = https://github.com/DO1JLR/ansible_role_amdgpu_firmware.git
