@@ -1,126 +1,41 @@
 ---
 - name: check if ansible is not to old
   hosts: localhost
-  tags:
-   - default
-   - always
   roles:
-    - ansible_version
-  gather_facts: no
+    - {role: ansible_version, tags: always, gather_facts: false}
 
 - name: avahi
-  hosts: t460p
+  hosts: t460p.local
   roles:
     - {role: avahi_daemon, tags: [avahi_daemon, avahi, mdns], become: true}
 
-- name: Install useful packages
-  hosts: t460p
-  tags:
-  - packages
-  - updates
-  - setup
+- name: base packages setup
+  hosts: t460p.local
   roles:
-    - workstation_packages
+    - {role: workstation_packages, tags: [base, packages, workstation]}
 
-- name: enable and secure sshd
-  hosts: t460p
-  tags:
-  - secure
-  - ssh
-  - setup
+- name: user and ssh(d) setup
+  hosts: t460.local
   roles:
-    - manage_users
-    - authorized_keys
-    - sshd
+    - {role: manage_users, tags: [users, base]}
+    - {role: authorized_keys, tags: [auth, base]}
+    - {role: sshd, tags: [sshd, base]}
+    - {role: dotfiles, tags: [dotfiles, base]}
 
-- name: Install useful dotfiles
-  hosts: t460p
-  tags:
-  - setup
-  - dotfiles
+- name: fancy schnickschnack
+  hosts: t460.local
   roles:
-    - dotfiles
-
-- name: set akku warning
-  hosts: t460p
-  tags:
-  - setup
-  - akku
-  - akku-warning
-  roles:
-    - akku-warning
-
-- name: install modules for sound and bluetooth
-  hosts: t460p
-  tags:
-  - setup
-  - pulseaudio
-  - networkmanager
-  roles:
-    - pulseaudio
-    - networkmanager
-
-- name: install some arch fonts
-  hosts: t460p
-  tags:
-  - arch
-  - firefox
-  - browser
-  - install-firefox
-  roles:
-   - install-firefox
-
-- name: Install useful packages
-  hosts: t460p
-  tags:
-  - packages
-  - i3wm
-  roles:
-    - copy_files
-    - i3wm
-    - ntp
-    - xrandr
-
-- name: OVPN
-  hosts: t460p
-  tags:
-    - vpn
-    - ovpn
-    - openvpn
-  roles:
-    - openvpn
-
-- name: install nextcloud-client
-  hosts: t460p
-  tags:
-  - setup
-  - nextcloud
-  roles:
-    - nextcloud
-
-- name: install some arch fonts
-  hosts: t460p
-  tags:
-  - arch
-  - font
-  - fonts
-  - schrift
-  roles:
-   - arch-fonts
-
-- name: install winehq
-  hosts: t460p
-  tags:
-  - wine
-  - winehq
-  roles:
-   - winehq
-
-- name: disable sleeping
-  hosts: t460p
-  tags:
-  - sleep
-  - suspend
-  - no-sleep
-  roles:
-   - no-sleep
+    - {role: akku-warning, tags: akku}
+    - {role: pulseaudio, tags: [pulse, audio, pulseaudio]}
+    - {role: networkmanager, tags: networkmanager, when: ansible_os_family == 'Archlinux'}
+    - {role: openvpn, tags: ovpn}
+    - {role: nextcloud, tags: nextcloud, when: ansible_os_family == 'Archlinux'}
+    - {role: bat, tags: bat, when: ansible_os_family == 'Debian'}
+    - {role: install-firefox, tags: firefox}
+    - {role: copy_files}
+    - {role: i3wm, tags: i3wm}
+    - {role: ntp, tags: ntp}
+    - {role: xrandr, tags: xrandr}
+    - {role: arch-fonts, tags: fonts}
+    - {role: winehq, tags: wine}
+    - {role: no-sleep, tags: sleep}

@@ -1,122 +1,36 @@
 ---
 - name: check if ansible is not to old
   hosts: localhost
-  tags:
-   - default
-   - always
   roles:
-    - ansible_version
-  gather_facts: no
+    - {role: ansible_version, tags: always, gather_facts: false}
 
-- name: Install useful packages
-  hosts: desk_minni
-  tags:
-  - packages
-  - updates
-  - setup
-  - workstation_packages
+- name: base packages setup
+  hosts: desk_minni.local
   roles:
-    - workstation_packages
+    - {role: workstation_packages, tags: [base, packages, workstation]}
 
-- name: enable and secure sshd
-  hosts: desk_minni
-  tags:
-  - secure
-  - ssh
-  - setup
+- name: user and ssh(d) setup
+  hosts: desk_minni.local
   roles:
-    - manage_users
-    - authorized_keys
-    - sshd
+    - {role: manage_users, tags: [users, base]}
+    - {role: authorized_keys, tags: [auth, base]}
+    - {role: sshd, tags: [sshd, base]}
+    - {role: dotfiles, tags: [dotfiles, base]}
 
-- name: Install useful dotfiles
-  hosts: desk_minni
-  tags:
-  - setup
+- name: fancy schnickschnack
+  hosts: desk_minni.local
   roles:
-    - dotfiles
-
-- name: set akku warning
-  hosts: desk_minni
-  tags:
-  - setup
-  - akku
-  roles:
-    - akku-warning
-
-- name: install modules for sound and bluetooth
-  hosts: desk_minni
-  tags:
-  - setup
-  - pulseaudio
-  - networkmanager
-  roles:
-    - pulseaudio
-    - networkmanager
-
-- name: Install useful packages
-  hosts: desk_minni
-  tags:
-  - packages
-  - i3wm
-  - copy_files
-  - i3wm
-  - ntp
-  - xrandr
-  roles:
-    - copy_files
-    - i3wm
-    - ntp
-    - xrandr
-- name: install some arch fonts
-  hosts: desk_minni
-  tags:
-  - arch
-  - firefox
-  - browser
-  - install-firefox
-  roles:
-   - install-firefox
-
-- name: install nextcloud-client
-  hosts: desk_minni
-  tags:
-  - setup
-  - nextcloud
-  roles:
-    - nextcloud
-
-- name: install some arch fonts
-  hosts: desk_minni
-  tags:
-  - arch
-  - font
-  - fonts
-  - schrift
-  roles:
-   - arch-fonts
-
-- name: install openvpn
-  hosts: desk_minni
-  tags:
-  - vpn
-  - openvpn
-  roles:
-   - openvpn
-
-- name: install winehq
-  hosts: desk_minni
-  tags:
-  - wine
-  - winehq
-  roles:
-   - winehq
-
-- name: disable sleeping
-  hosts: desk_minni
-  tags:
-  - sleep
-  - suspend
-  - no-sleep
-  roles:
-   - no-sleep
+    - {role: akku-warning, tags: akku}
+    - {role: pulseaudio, tags: [pulse, audio, pulseaudio]}
+    - {role: networkmanager, tags: networkmanager, when: ansible_os_family == 'Archlinux'}
+    - {role: openvpn, tags: ovpn}
+    - {role: nextcloud, tags: nextcloud, when: ansible_os_family == 'Archlinux'}
+    - {role: bat, tags: bat, when: ansible_os_family == 'Debian'}
+    - {role: install-firefox, tags: firefox}
+    - {role: copy_files}
+    - {role: i3wm, tags: i3wm}
+    - {role: ntp, tags: ntp}
+    - {role: xrandr, tags: xrandr}
+    - {role: arch-fonts, tags: fonts}
+    - {role: winehq, tags: wine}
+    - {role: no-sleep, tags: sleep}

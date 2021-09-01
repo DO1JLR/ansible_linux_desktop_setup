@@ -24,6 +24,7 @@
     - {role: akku-warning, tags: akku}
     - {role: pulseaudio, tags: [pulse, audio, pulseaudio]}
     - {role: networkmanager, tags: networkmanager, when: ansible_os_family == 'Archlinux'}
+    - {role: openvpn, tags: ovpn}
     - {role: nextcloud, tags: nextcloud, when: ansible_os_family == 'Archlinux'}
     - {role: bat, tags: bat, when: ansible_os_family == 'Debian'}
     - {role: install-firefox, tags: firefox}
