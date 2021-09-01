@@ -58,9 +58,9 @@
 [submodule "roles/bat"]
 	path = roles/bat
 	url = https://github.com/gantsign/ansible_role_bat.git
-[submodule "roles/avahi_daemon"]
-	path = roles/avahi_daemon
-	url = git@git.ccczh.ch:ansible-roles/role-avahi_daemon.git
 [submodule "roles/amdgpu_firmware"]
 	path = roles/amdgpu_firmware
 	url = https://github.com/DO1JLR/ansible_role_amdgpu_firmware.git
+[submodule "roles/do1jlr.avahi"]
+	path = roles/do1jlr.avahi_daemon
+	url = https://github.com/roles-ansible/ansible_role_avahi_daemon.git

@@ -5,17 +5,17 @@
     - {role: ansible_version, tags: always, gather_facts: false}
 
 - name: avahi
-  hosts: t460p.local
+  hosts: workstation.local
   roles:
-    - {role: avahi_daemon, tags: [avahi_daemon, avahi, mdns], become: true}
+    - {role: do1jlr.avahi_daemon, tags: [avahi_daemon, avahi, mdns], become: true}
 
 - name: base packages setup
-  hosts: t460p.local
+  hosts: workstation.local
   roles:
     - {role: workstation_packages, tags: [base, packages, workstation]}
 
 - name: user and ssh(d) setup
-  hosts: t460p.local
+  hosts: workstation.local
   roles:
     - {role: manage_users, tags: [users, base]}
     - {role: authorized_keys, tags: [auth, base]}
@@ -23,7 +23,7 @@
     - {role: dotfiles, tags: [dotfiles, base]}
 
 - name: fancy schnickschnack
-  hosts: t460p.local
+  hosts: workstation.local
   roles:
     - {role: akku-warning, tags: akku}
     - {role: pulseaudio, tags: [pulse, audio, pulseaudio]}
