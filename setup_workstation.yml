@@ -4,12 +4,6 @@
   roles:
     - {role: ansible_version, tags: always, gather_facts: false}
 
-- name: avahi
-  hosts: workstation.local
-  roles:
-    - {role: do1jlr.avahi_daemon, tags: [avahi_daemon, avahi]}
-    - {role: do1jlr.avahi_client, tags: [avahi_client, mdns]}
-
 - name: base packages setup
   hosts: workstation.local
   roles:
@@ -40,3 +34,5 @@
     - {role: arch-fonts, tags: fonts}
     - {role: winehq, tags: wine}
     - {role: no-sleep, tags: sleep}
+    - {role: do1jlr.avahi_daemon, tags: [avahi_daemon, avahi]}
+    - {role: do1jlr.avahi_client, tags: [avahi_client, mdns]}
