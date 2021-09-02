@@ -64,3 +64,6 @@
 [submodule "roles/do1jlr.avahi"]
 	path = roles/do1jlr.avahi_daemon
 	url = https://github.com/roles-ansible/ansible_role_avahi_daemon.git
+[submodule "roles/do1jlr.avahi_client"]
+	path = roles/do1jlr.avahi_client
+	url = https://github.com/roles-ansible/ansible_role_avahi_client.git

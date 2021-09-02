@@ -7,7 +7,8 @@
 - name: avahi
   hosts: workstation.local
   roles:
-    - {role: do1jlr.avahi_daemon, tags: [avahi_daemon, avahi, mdns], become: true}
+    - {role: do1jlr.avahi_daemon, tags: [avahi_daemon, avahi]}
+    - {role: do1jlr.avahi_client, tags: [avahi_client, mdns]}
 
 - name: base packages setup
   hosts: workstation.local
