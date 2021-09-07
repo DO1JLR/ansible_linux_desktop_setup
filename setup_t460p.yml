@@ -4,11 +4,6 @@
   roles:
     - {role: ansible_version, tags: always, gather_facts: false}
 
-- name: avahi
-  hosts: t460p.local
-  roles:
-    - {role: avahi_daemon, tags: [avahi_daemon, avahi, mdns], become: true}
-
 - name: base packages setup
   hosts: t460p.local
   roles:
