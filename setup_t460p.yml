@@ -12,8 +12,8 @@
 - name: user and ssh(d) setup
   hosts: t460p.local
   roles:
-    - {role: manage_users, tags: [users, base]}
-    - {role: authorized_keys, tags: [auth, base]}
+    - {role: do1jlr.users, tags: [users, base]}
+    - {role: do1jlr.auth, tags: [auth, base]}
     - {role: do1jlr.sshd, tags: [sshd, base]}
     - {role: dotfiles, tags: [dotfiles, base]}
 

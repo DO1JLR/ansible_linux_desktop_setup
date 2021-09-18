@@ -11,7 +11,7 @@
 	path = roles/pulseaudio
 	url = https://github.com/chaos-bodensee/role_pulseaudio_archlinux.git
 [submodule "roles/authorized_keys"]
-	path = roles/authorized_keys
+	path = roles/do1jlr.auth
 	url = https://github.com/ffbsee/role-ssh_authorized_keys.git
 [submodule "files/admin_ssh_keys"]
 	path = files/admin_ssh_keys
@@ -44,7 +44,7 @@
 	path = roles/no-sleep
 	url = https://github.com/chaos-bodensee/role_disable_sleep.git
 [submodule "roles/manage_users"]
-	path = roles/manage_users
+	path = roles/do1jlr.users
 	url = https://github.com/chaos-bodensee/role-manage_users.git
 [submodule "roles/polybar"]
 	path = roles/polybar
