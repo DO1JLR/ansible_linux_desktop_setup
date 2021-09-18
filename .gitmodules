@@ -17,7 +17,7 @@
 	path = files/admin_ssh_keys
 	url = https://backwesen.de/ansible/ssh_public_keys.git
 [submodule "roles/sshd"]
-	path = roles/sshd
+	path = roles/do1jlr.sshd
 	url = https://github.com/roles-ansible/ansible_role_sshd.git
 [submodule "roles/nextcloud"]
 	path = roles/nextcloud

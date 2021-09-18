@@ -14,7 +14,7 @@
   roles:
     - {role: manage_users, tags: [users, base]}
     - {role: authorized_keys, tags: [auth, base]}
-    - {role: sshd, tags: [sshd, base]}
+    - {role: do1jlr.sshd, tags: [sshd, base]}
     - {role: dotfiles, tags: [dotfiles, base]}
 
 - name: fancy schnickschnack
