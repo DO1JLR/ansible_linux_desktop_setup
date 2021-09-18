@@ -4,6 +4,7 @@
 # some ssh role parameters
 home_sweet_home: false
 install_keychain: true
+
 # i3wm config:
 enable_lock_after_time: true
 

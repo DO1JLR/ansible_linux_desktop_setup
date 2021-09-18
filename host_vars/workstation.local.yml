@@ -25,3 +25,6 @@ copy_to_user: "{{ akku_user }}"
 
 wine_user: "{{ akku_user }}"
 wine_user_home: "/home/{{ akku_user }}"
+
+# overrite for 4K screen
+i3_font_size: 16
