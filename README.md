@@ -14,10 +14,10 @@ Different to my other ansible playbooks:
 -----------------------
 ```bash
 # Clone Git
-git clone --recursive https://github.com/DO1JLR/ansible_thinkpad_setup.git ansible_thinkpad_setup
+git clone --recursive https://github.com/DO1JLR/ansible_linux_desktop_setup.git ansible_linux_desktop_setup
 
-# go into the folder
-cd ansible_thinkpad_setup
+# go into the cloned folder
+cd ansible_linux_desktop_setup
 
 # Download needed submodules
 git submodule update --init --recursive
