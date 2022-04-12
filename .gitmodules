@@ -3,7 +3,7 @@
 	url = https://github.com/chaos-bodensee/role_install_workstaton_packages.git
 [submodule "roles/i3wm"]
 	path = roles/i3wm
-	url = https://github.com/chaos-bodensee/ansible-role-i3wm.git
+	url = https://github.com/roles-ansible/ansible-role-i3wm.git
 [submodule "roles/dotfiles"]
 	path = roles/dotfiles
 	url = https://github.com/chaos-bodensee/role_dotfiles.git
