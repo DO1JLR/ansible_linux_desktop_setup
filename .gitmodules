@@ -1,9 +1,6 @@
 [submodule "roles/workstation_packages"]
 	path = roles/workstation_packages
 	url = https://github.com/chaos-bodensee/role_install_workstaton_packages.git
-[submodule "roles/do1jlr.i3wm"]
-	path = roles/do1jlr.i3wm
-	url = https://github.com/roles-ansible/ansible_role_i3wm.git
 [submodule "roles/dotfiles"]
 	path = roles/dotfiles
 	url = https://github.com/chaos-bodensee/role_dotfiles.git
@@ -67,3 +64,6 @@
 [submodule "roles/do1jlr.avahi_client"]
 	path = roles/do1jlr.avahi_client
 	url = https://github.com/roles-ansible/ansible_role_avahi_client.git
+[submodule "roles/do1jlr.i3wm"]
+	path = roles/do1jlr.i3wm
+	url = https://github.com/roles-ansible/ansible_role_i3wm.git

@@ -28,7 +28,7 @@
     - {role: bat, tags: bat, when: ansible_os_family == 'Debian'}
     - {role: install-firefox, tags: firefox}
     - {role: copy_files}
-    - {role: i3wm, tags: i3wm}
+    - {role: do1jlr.i3wm, tags: i3wm}
     - {role: ntp, tags: ntp}
     - {role: xrandr, tags: xrandr}
     - {role: arch-fonts, tags: fonts}

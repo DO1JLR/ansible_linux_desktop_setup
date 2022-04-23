@@ -23,7 +23,7 @@
     - {role: pulseaudio, tags: pulseaudio}
     - {role: networkmanager, tags: [nm, networkmanager]}
     - {role: copy_files}
-    - {role: i3wm, tags: i3wm}
+    - {role: do1jlr.i3wm, tags: i3wm}
     - {role: xrandr, tags: xrandr}
     - {role: install-firefox, tags: firefox}
     - {role: nextcloud, tags: nextcloud}
