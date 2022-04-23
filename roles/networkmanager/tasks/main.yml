@@ -4,7 +4,7 @@
 
 - name: install needed packages on arch
   become: yes
-  pacman:
+  community.general.pacman:
     name:
      - wireless_tools
      - iw 
@@ -17,21 +17,21 @@
 
 - name: install Networkmanager
   become: yes
-  dnf:
+  ansible.builtin.dnf:
     name: NetworkManager
     state: present
   when: ansible_distribution == 'Fedora'
 
 - name: install NetworkManager
   become: yes
-  apt:
+  ansible.builtin.apt:
     name: networkmanager
     state: present
   when: ansible_os_family == 'Debian'
 
 - name: install needed packages for NetworkManager
   become: yes
-  package:
+  ansible.builtin.package:
     name:
      - dialog
      - wpa_supplicant
@@ -41,6 +41,6 @@
 
 - name: enable networkmanager
   become: yes
-  systemd:
+  ansible.builtin.systemd:
     name: NetworkManager.service
     enabled: yes
