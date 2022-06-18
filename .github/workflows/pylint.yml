@@ -1,0 +1,15 @@
+---
+name: 'Pylint GitHub Actions'
+
+# yamllint disable-line rule:truthy
+on: [push, pull_request]
+
+jobs:
+  pylint:
+    name: 'Pylint'
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@master
+      - name: GitHub Action for pylint
+        uses: cclauss/GitHub-Action-for-pylint@0.7.0

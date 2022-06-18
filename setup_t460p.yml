@@ -21,7 +21,7 @@
   hosts: t460p.local
   roles:
     - {role: akku-warning, tags: akku}
-#    - {role: pulseaudio, tags: [pulse, audio, pulseaudio]}
+    # - {role: pulseaudio, tags: [pulse, audio, pulseaudio]}
     - {role: networkmanager, tags: networkmanager, when: ansible_os_family == 'Archlinux'}
     - {role: openvpn, tags: ovpn}
     - {role: nextcloud, tags: nextcloud, when: ansible_os_family == 'Archlinux'}
