@@ -1,16 +1,20 @@
  Ansible Linux Desktop Setup
 ==========================
-This ansible playbook collection creates [L3D](https://chaos.social/@l3d)s Desktop enviroment. Including window manager and some pre-installed programms like [Firefox](https://www.mozilla.org/de/firefox/new/) and some usefull shell programms.
+This ansible playbook collection manages some of my workstations and laptops. Because of this it sometimes contains very specific variables like my username, SSH keys or similar data that may not be the best choice for your system.
 
- ATTENTION
+Nevertheless, this ansible playbook is not only publicly available on the internet, but by the MIT license a part of free open-source ansible, which may serve you as inspiration within the framework of the MIT license.
+
+
+ Inventory
 -------------
-Different to my other ansible playbooks:
+This is my first ansible with dynamic inventory. The [inventory.py](inventory.py) script looks at which hostname it was lauched on. If the hostname is known, the host is mapped to the group stored for it and a local connection to the host is established.
 
-### THIS PLAYBOOK HAS TO BE EXECUTET AT THE TARGET HOST DIRECTLY!
+This has the advantage that different environments are automatically recognized and significantly less danger of accidentally rolling out the ansible with the variables for a completely different host and thus configuring things that were not intended for this device.
 
-*It requires some GUI stuff and I did not find the time to forward X or wayland correctly to make it remotely working. Sorry. Feel free to create a Issue or pull-request*
+Obviously, this also means that **this playbook must always be run on the host you want to manage** and this ansible playbook is not meant to be run remotely.
 
-  Install tipps:
+
+Install tipps:
 -----------------------
 ```bash
 # Clone Git
