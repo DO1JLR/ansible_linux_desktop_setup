@@ -5,6 +5,7 @@ Create a dynamic inventory for this ansible playbook
 """
 import socket
 import sys
+import json
 
 # create a dict to match hostnames to enviroments
 env_dict = {
@@ -27,8 +28,16 @@ def env(domain):
     for key, values in env_dict.items():
         if domain in values:
             return key
-    sys.exit('{"group": { "hosts": ["example.com"], "vars": {} }, "_meta": { "foo": "bar" }}')
+    print(json.dumps(empty_host_list(), sort_keys=True, indent=2))
+    sys.exit()
 
+def empty_host_list():
+    """
+    return empty host list
+    """
+    comment = "No valid host found. returning empty host list!"
+    return json.loads('{"_meta": {"comment": "' + comment +
+        '", "hostvars": {}}, "instances": {"hosts": []}}')
 
 def main():
     """
@@ -40,12 +49,14 @@ def main():
     host = fqdn()
     group = env(host)
     print(host + group)
-# {
-#   "group":
-#     { "hosts": ["127.0.0.1", "::1"], "vars": {}  },
-#   "_meta":
-#     { "hostvars": { "192.168.28.71": {  "host_specific_var": "bar" },
-#       "192.168.28.72": {  "host_specific_var": "foo"   }}    }
+#{
+#    "_meta": {
+#        "hostvars": { }
+#    },
+#
+#    "instances": {
+#        "hosts": ["10.66.70.33"]
+#    }
 # }
 
 main()
