@@ -12,7 +12,7 @@ env_dict = {
   'work':
     ['workstation.local'],
   'private':
-    ['dderpy.local', 'foo.bar']
+    ['derpy.local', 'foo.bar']
 }
 
 def fqdn():
@@ -24,6 +24,7 @@ def fqdn():
 def env(domain):
     """
     map a hostname to a space
+    or print empty list if no one matched and exit
     """
     for key, values in env_dict.items():
         if domain in values:
@@ -39,6 +40,13 @@ def empty_host_list():
     return json.loads('{"_meta": {"comment": "' + comment +
         '", "hostvars": {}}, "instances": {"hosts": []}}')
 
+def formated_host_group_list(host, group):
+    """
+    build inventory and return it
+    """
+    # pylint: disable=line-too-long
+    return json.loads('{"_meta": {"hostvars": {}},"' + str(group) + '": {"hosts": ["' + str(host) + '"]},"instances": {"children": ["' + str(group) + '"]}}')
+
 def main():
     """
     main funktion
@@ -48,7 +56,10 @@ def main():
     """
     host = fqdn()
     group = env(host)
-    print(host + group)
+    print(json.dumps(formated_host_group_list(host, group), sort_keys=True, indent=2))
+
+
+
 #{
 #    "_meta": {
 #        "hostvars": { }
