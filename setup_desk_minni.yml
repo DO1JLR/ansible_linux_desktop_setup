@@ -21,7 +21,7 @@
   hosts: desk_minni.local
   roles:
     - {role: akku-warning, tags: akku}
-      # - {role: pulseaudio, tags: [pulse, audio, pulseaudio]}
+    # - {role: pulseaudio, tags: [pulse, audio, pulseaudio]}
     - {role: networkmanager, tags: networkmanager, when: ansible_os_family == 'Archlinux'}
     - {role: openvpn, tags: ovpn}
     - {role: nextcloud, tags: nextcloud, when: ansible_os_family == 'Archlinux'}
@@ -32,7 +32,7 @@
     - {role: ntp, tags: ntp}
     - {role: xrandr, tags: xrandr}
     - {role: arch-fonts, tags: fonts}
-      # - {role: winehq, tags: wine}
+    # - {role: winehq, tags: wine}
     - {role: no-sleep, tags: sleep}
     - {role: do1jlr.avahi_daemon, tags: [avahi_daemon, avahi]}
     - {role: do1jlr.avahi_client, tags: [avahi_client, mdns]}
