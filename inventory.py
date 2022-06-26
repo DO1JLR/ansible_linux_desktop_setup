@@ -12,7 +12,7 @@ env_dict = {
   'work':
     ['workstation.local'],
   'private':
-    ['derpy.local', 'foo.bar']
+    ['derpy.local', 'applejack.local']
 }
 
 def fqdn():
@@ -29,14 +29,14 @@ def env(domain):
     for key, values in env_dict.items():
         if domain in values:
             return key
-    print(json.dumps(empty_host_list(), sort_keys=True, indent=2))
+    print(json.dumps(empty_host_list(domain), sort_keys=True, indent=2))
     sys.exit()
 
-def empty_host_list():
+def empty_host_list(domain):
     """
     return empty host list
     """
-    comment = "No valid host found. returning empty host list!"
+    comment = f"No valid host found. Found '{domain}'. Return empty host list!"
     return json.loads('{"_meta": {"comment": "' + comment +
         '", "hostvars": {}}, "instances": {"hosts": []}}')
 
