@@ -10,7 +10,7 @@ import json
 # create a dict to match hostnames to enviroments
 env_dict = {
   'work':
-    ['workstation.local'],
+    ['workstation.local', 'daringdoo.local'],
   'private':
     ['derpy.local', 'applejack.local']
 }
@@ -19,7 +19,10 @@ def fqdn():
     """
     return fully qualified domain name
     """
-    return socket.getfqdn()
+    hostname = socket.gethostname()
+    if '.' not in hostname:
+        hostname = f"{hostname}.local"
+    return str(hostname)
 
 def env(domain):
     """
