@@ -67,3 +67,6 @@
 [submodule "roles/do1jlr.i3wm"]
 	path = roles/do1jlr.i3wm
 	url = https://github.com/roles-ansible/ansible_role_i3wm.git
+[submodule "roles/do1jlr.htop"]
+	path = roles/do1jlr.htop
+	url = https://github.com/roles-ansible/ansible_role_htop.git

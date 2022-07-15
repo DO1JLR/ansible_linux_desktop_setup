@@ -43,12 +43,19 @@ def empty_host_list(domain):
     return json.loads('{"_meta": {"comment": "' + comment +
         '", "hostvars": {}}, "instances": {"hosts": []}}')
 
+def hostvars(host):
+    """
+    set variables to local connection
+    """
+    local = str('"' + host + '": {"ansible_connection": "local"}')
+    return local
+
 def formated_host_group_list(host, group):
     """
     build inventory and return it
     """
     # pylint: disable=line-too-long
-    return json.loads('{"_meta": {"hostvars": {}},"' + str(group) + '": {"hosts": ["' + str(host) + '"]},"instances": {"children": ["' + str(group) + '"]}}')
+    return json.loads('{"_meta": {"hostvars": {' + str(hostvars(host)) + '}},"' + str(group) + '": {"hosts": ["' + str(host) + '"]},"instances": {"children": ["' + str(group) + '"]}}')
 
 def main():
     """
