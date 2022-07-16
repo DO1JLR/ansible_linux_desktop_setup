@@ -68,5 +68,7 @@ i3_run_on_startup:
  # - nextcloud
  - sudo nm-applet
 
+htop__compile: true
+
 # globaly enably simple versionscheck - if available
 submodules_versioncheck: true
