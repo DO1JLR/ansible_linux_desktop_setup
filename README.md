@@ -28,6 +28,15 @@ git submodule update --init --recursive
 
 # make sure you always check out the submodules
 git config --global submodule.recurse true
+
+# Install Ansible in venv
+python3 -m venv ansible
+
+# Activate Venv
+source ansible/bin/activate
+
+# Install Ansible
+pip3 install ansible-core 
 ```
 
  Which playbook?

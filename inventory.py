@@ -12,7 +12,7 @@ env_dict = {
   'work':
     ['workstation.local', 'daringdoo.local'],
   'private':
-    ['derpy.local', 'applejack.local']
+    ['derpy.local', 'applejack.local', 'rarity.local']
 }
 
 def fqdn():
