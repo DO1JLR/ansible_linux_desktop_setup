@@ -36,7 +36,7 @@ python3 -m venv ansible
 source ansible/bin/activate
 
 # Install Ansible
-pip3 install ansible-core 
+pip3 install --upgrade ansible-core ansible-lint pylint
 ```
 
  Which playbook?

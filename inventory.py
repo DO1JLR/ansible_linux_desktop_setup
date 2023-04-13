@@ -28,8 +28,10 @@ def become_pass(host):
     """
     return variable for become password using gopass lookup
     """
-    passstring = str("\"ansible_become_pass\": \"{{ lookup('community.general.passwordstore', 'ansible/hosts/" + host + "/users/root') }}\"")
-    return passstring 
+    passstring = str("\"ansible_become_pass\": "
+        + "\"{{ lookup('community.general.passwordstore', 'ansible/hosts/"
+        + host + "/users/root') }}\"")
+    return passstring
 
 def env(domain):
     """
