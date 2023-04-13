@@ -1,11 +1,20 @@
 ---
 - name: check if ansible is not to old
-  hosts: localhost
+  hosts: all
   roles:
     - {role: ansible_version, tags: always, gather_facts: false}
 
+- name: Test
+  hosts: all
+  tasks:
+    - name: TEST1
+      ansible.builtin.debug:
+        msg: "{{ ansible_become_pass }}"
+    - name: T2
+      ansible.builtin.debug:
+        msg: "{{ lookup('community.general.passwordstore', 'ansible/hosts/rarity.local/users/root') }}"
 - name: run do1jlr.base setup roles
-  hosts: localhost
+  hosts: all
   roles:
     #- {role: do1jlr.base, tags: [default, packages, base]}
     #- {role: workstation_packages, tags: [default, workstation_packages, packages, setup]}
@@ -15,7 +24,7 @@
       #- {role: arch-fonts, tags: [font, fonts, arch-fonts]}
 
 #- name: user specific setup
-#  hosts: localhost
+#  hosts: private
 #  roles:
     #- {role: dotfiles, tags: [default, dotfiles, fancy]}
     #- {role: manage_users, tags: [ssh, manage, manage_users]}

@@ -24,6 +24,13 @@ def fqdn():
         hostname = f"{hostname}.local"
     return str(hostname)
 
+def become_pass(host):
+    """
+    return variable for become password using gopass lookup
+    """
+    passstring = str("\"ansible_become_pass\": \"{{ lookup('community.general.passwordstore', 'ansible/hosts/" + host + "/users/root') }}\"")
+    return passstring 
+
 def env(domain):
     """
     map a hostname to a space
@@ -47,7 +54,7 @@ def hostvars(host):
     """
     set variables to local connection
     """
-    local = str('"' + host + '": {"ansible_connection": "local"}')
+    local = str('"' + host + '": {"ansible_connection": "local", ' + str(become_pass(host)) + '}')
     return local
 
 def formated_host_group_list(host, group):
@@ -67,17 +74,5 @@ def main():
     host = fqdn()
     group = env(host)
     print(json.dumps(formated_host_group_list(host, group), sort_keys=True, indent=2))
-
-
-
-#{
-#    "_meta": {
-#        "hostvars": { }
-#    },
-#
-#    "instances": {
-#        "hosts": ["10.66.70.33"]
-#    }
-# }
 
 main()

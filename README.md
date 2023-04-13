@@ -54,3 +54,7 @@ Or create a new git repo and be inspired by the roles L3D uses.
 If you find this usefull please take a few secounds and say thankyou to L3D.
 
 He is at the most [chaos events](https://events.ccc.de), simple give him a Tschunk or Club Mate there!
+
+ Additional Infos
+------------------
+By the way, to store sensible passwords, I am using the [community.general.passwordstore](https://docs.ansible.com/ansible/latest/collections/community/general/passwordstore_lookup.html) Lookup to access my passwords, stored in [gopass](https://gopass.pw/) Password Manager.
