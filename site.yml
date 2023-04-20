@@ -4,15 +4,6 @@
   roles:
     - {role: ansible_version, tags: always, gather_facts: false}
 
-- name: Test
-  hosts: all
-  tasks:
-    - name: TEST1
-      ansible.builtin.debug:
-        msg: "{{ ansible_become_pass }}"
-    - name: T2
-      ansible.builtin.debug:
-        msg: "{{ lookup('community.general.passwordstore', 'ansible/hosts/rarity.local/users/root') }}"
 - name: run do1jlr.base setup roles
   hosts: all
   roles:
