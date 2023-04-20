@@ -27,7 +27,7 @@
 	url = https://github.com/DO1JLR/role_nextcloud_client.git
 	branch = master
 [submodule "roles/ntp"]
-	path = roles/ntp
+	path = roles/l3d.ntp
 	url = https://github.com/roles-ansible/ansible_role_ntp.git
 	branch = main
 [submodule "roles/arch-fonts"]
@@ -71,7 +71,7 @@
 	url = https://github.com/roles-ansible/ansible_role_base.git
 	branch = main
 [submodule "roles/bat"]
-	path = roles/bat
+	path = roles/gantsign.bat
 	url = https://github.com/gantsign/ansible_role_bat.git
 	branch = master
 [submodule "roles/amdgpu_firmware"]

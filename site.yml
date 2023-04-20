@@ -4,14 +4,15 @@
   roles:
     - {role: ansible_version, tags: always, gather_facts: false}
 
-- name: run do1jlr.base setup roles
+- name: Generic Workstation Preperation
   hosts: all
   roles:
     # - {role: do1jlr.base, tags: [default, packages, base]}
     # - {role: workstation_packages, tags: [default, workstation_packages, packages, setup]}
-    - {role: ntp, tags: ntp}
+    - {role: l3d.ntp, tags: ntp}
     - {role: do1jlr.avahi_client, tags: avahi}
     - {role: do1jlr.avahi_daemon, tags: avahi}
+    - {role: gantsign.bat, tags: bat}
     # - {role: arch-fonts, tags: [font, fonts, arch-fonts]}
 
 # - name: user specific setup
