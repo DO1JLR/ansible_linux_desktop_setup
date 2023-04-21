@@ -1,69 +1,98 @@
 [submodule "roles/workstation_packages"]
 	path = roles/workstation_packages
 	url = https://github.com/chaos-bodensee/role_install_workstaton_packages.git
+	branch = master
 [submodule "roles/dotfiles"]
 	path = roles/dotfiles
-	url = https://github.com/chaos-bodensee/role_dotfiles.git
+	url = https://github.com/roles-ansible/ansible_role_dotfiles.git
+	branch = main
 [submodule "roles/pulseaudio"]
 	path = roles/pulseaudio
 	url = https://github.com/chaos-bodensee/role_pulseaudio_archlinux.git
+	branch = master
 [submodule "roles/authorized_keys"]
 	path = roles/do1jlr.auth
-	url = https://github.com/ffbsee/role-ssh_authorized_keys.git
+	url = https://github.com/roles-ansible/ansible_role_auth.git
+	branch = main
 [submodule "files/admin_ssh_keys"]
 	path = files/admin_ssh_keys
 	url = https://backwesen.de/ansible/ssh_public_keys.git
+	branch = main
 [submodule "roles/sshd"]
 	path = roles/do1jlr.sshd
 	url = https://github.com/roles-ansible/ansible_role_sshd.git
+	branch = main
 [submodule "roles/nextcloud"]
 	path = roles/nextcloud
 	url = https://github.com/DO1JLR/role_nextcloud_client.git
-[submodule "roles/ntp"]
-	path = roles/ntp
-	url = https://github.com/chaos-bodensee/role-ntp.git
+	branch = master
 [submodule "roles/arch-fonts"]
 	path = roles/arch-fonts
 	url = https://github.com/chaos-bodensee/role-arch-fonts.git
+	branch = master
 [submodule "roles/akku-warning"]
 	path = roles/akku-warning
 	url = https://github.com/roles-ansible/role_akku_warning.git
+	branch = main
 [submodule "roles/install-firefox"]
 	path = roles/install-firefox
 	url = https://github.com/roles-ansible/ansible_role_install_firefox.git
+	branch = main
 [submodule "roles/xrandr"]
 	path = roles/xrandr
-	url = https://github.com/chaos-bodensee/role-xrandr.git
+	url = https://github.com/roles-ansible/ansible_role_xrandr_help.git
+	branch = main
 [submodule "roles/winehq"]
 	path = roles/winehq
 	url = https://github.com/ekultails/ansible_role_wine.git
+	branch = master
 [submodule "roles/no-sleep"]
 	path = roles/no-sleep
 	url = https://github.com/chaos-bodensee/role_disable_sleep.git
+	branch = master
 [submodule "roles/manage_users"]
 	path = roles/do1jlr.users
-	url = https://github.com/chaos-bodensee/role-manage_users.git
+	url = https://github.com/roles-ansible/ansible_role_users.git
+	branch = main
 [submodule "roles/polybar"]
 	path = roles/polybar
 	url = https://github.com/chaos-bodensee/role_install-polybar.git
+	branch = master
 [submodule "roles/ansible_version"]
 	path = roles/ansible_version
 	url = https://github.com/chaos-bodensee/role-ansible_version.git
+	branch = main
 [submodule "roles/base"]
 	path = roles/do1jlr.base
 	url = https://github.com/roles-ansible/ansible_role_base.git
-[submodule "roles/bat"]
-	path = roles/bat
-	url = https://github.com/gantsign/ansible_role_bat.git
+	branch = main
 [submodule "roles/amdgpu_firmware"]
 	path = roles/amdgpu_firmware
 	url = https://github.com/DO1JLR/ansible_role_amdgpu_firmware.git
+	branch = main
 [submodule "roles/do1jlr.avahi"]
 	path = roles/do1jlr.avahi_daemon
 	url = https://github.com/roles-ansible/ansible_role_avahi_daemon.git
+	branch = main
 [submodule "roles/do1jlr.avahi_client"]
 	path = roles/do1jlr.avahi_client
 	url = https://github.com/roles-ansible/ansible_role_avahi_client.git
+	branch = main
 [submodule "roles/do1jlr.i3wm"]
 	path = roles/do1jlr.i3wm
 	url = https://github.com/roles-ansible/ansible_role_i3wm.git
+	branch = main
+[submodule "roles/do1jlr.htop"]
+	path = roles/do1jlr.htop
+	url = https://github.com/roles-ansible/ansible_role_htop.git
+	branch = main
+[submodule "collections/ansible_collections/community/general"]
+	path = collections/ansible_collections/community/general
+	url = https://github.com/ansible-collections/community.general.git
+	branch = main
+[submodule "roles/gantsign.bat"]
+	path = roles/gantsign.bat
+	url = https://github.com/gantsign/ansible_role_bat.git
+[submodule "roles/l3d.ntp"]
+	path = roles/l3d.ntp
+	url = https://github.com/roles-ansible/ansible_role_ntp.git

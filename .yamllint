@@ -9,3 +9,5 @@ rules:
 
 ignore: |
   roles/
+  collections/
+  ansible/

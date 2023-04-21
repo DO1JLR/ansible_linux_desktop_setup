@@ -1,32 +1,35 @@
 ---
 - name: check if ansible is not to old
-  hosts: localhost
+  hosts: all
   roles:
     - {role: ansible_version, tags: always, gather_facts: false}
 
-- name: run do1jlr.base setup roles
-  hosts: localhost
+- name: Generic Workstation Preperation
+  hosts: all
   roles:
-    - {role: do1jlr.base, tags: [default, packages, base]}
-    - {role: workstation_packages, tags: [default, workstation_packages, packages, setup]}
-    - {role: ntp, tags: ntp}
-    - {role: arch-fonts, tags: [font, fonts, arch-fonts]}
+    # - {role: do1jlr.base, tags: [default, packages, base]}
+    # - {role: workstation_packages, tags: [default, workstation_packages, packages, setup]}
+    - {role: l3d.ntp, tags: ntp}
+    - {role: do1jlr.avahi_client, tags: avahi}
+    - {role: do1jlr.avahi_daemon, tags: avahi}
+    - {role: gantsign.bat, tags: bat}
+    # - {role: arch-fonts, tags: [font, fonts, arch-fonts]}
 
-- name: user specific setup
-  hosts: localhost
-  roles:
-    - {role: dotfiles, tags: [default, dotfiles, fancy]}
-    - {role: manage_users, tags: [ssh, manage, manage_users]}
-    - {role: authorized_keys, tags: [ssh, auth, authorized_keys]}
-    - {role: sshd, tags: [ssh, sshd]}
-    - {role: akku-warning, tags: [akku, akku_warning, akku-warning]}
-    - {role: pulseaudio, tags: pulseaudio}
-    - {role: networkmanager, tags: [nm, networkmanager]}
-    - {role: copy_files}
-    - {role: do1jlr.i3wm, tags: i3wm}
-    - {role: xrandr, tags: xrandr}
-    - {role: install-firefox, tags: firefox}
-    - {role: nextcloud, tags: nextcloud}
-    - {role: openvpn, tags: openvpn}
-    - {role: winehq, tags: [wine, winehq]}
-    - {role: no-sleep, tags: no_sleep}
+# - name: user specific setup
+#   hosts: private
+#   roles:
+#     - {role: dotfiles, tags: [default, dotfiles, fancy]}
+#     - {role: manage_users, tags: [ssh, manage, manage_users]}
+#     - {role: authorized_keys, tags: [ssh, auth, authorized_keys]}
+#     - {role: sshd, tags: [ssh, sshd]}
+#     - {role: akku-warning, tags: [akku, akku_warning, akku-warning]}
+#     - {role: pulseaudio, tags: pulseaudio}
+#     - {role: networkmanager, tags: [nm, networkmanager]}
+#     - {role: copy_files}
+#     - {role: do1jlr.i3wm, tags: i3wm}
+#     - {role: xrandr, tags: xrandr}
+#     - {role: install-firefox, tags: firefox}
+#     - {role: nextcloud, tags: nextcloud}
+#     - {role: openvpn, tags: openvpn}
+#     - {role: winehq, tags: [wine, winehq]}
+#     - {role: no-sleep, tags: no_sleep}
