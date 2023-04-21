@@ -24,13 +24,16 @@ def fqdn():
         hostname = f"{hostname}.local"
     return str(hostname)
 
-def become_pass(host):
+def become_pass(host, group):
     """
     return variable for become password using gopass lookup
     """
-    passstring = str("\"ansible_become_pass\": "
-        + "\"{{ lookup('community.general.passwordstore', 'ansible/hosts/"
-        + host + "/users/root') }}\"")
+    if group == 'work':
+        gopasslookupprefix = 'private/ansible/hosts/'
+    else:
+        gopasslookupprefix = 'ansible/hosts/'
+    passstring = str("\"ansible_become_pass\": \"{{ lookup('community.general.passwordstore', '"
+      + gopasslookupprefix + host + "/users/root') }}\"")
     return passstring
 
 def env(domain):
@@ -52,11 +55,12 @@ def empty_host_list(domain):
     return json.loads('{"_meta": {"comment": "' + comment +
         '", "hostvars": {}}, "instances": {"hosts": []}}')
 
-def hostvars(host):
+def hostvars(host, group):
     """
     set variables to local connection
     """
-    local = str('"' + host + '": {"ansible_connection": "local", ' + str(become_pass(host)) + '}')
+    local = str('"' + host + '": {"ansible_connection": "local", '
+      + str(become_pass(host, group)) + '}')
     return local
 
 def formated_host_group_list(host, group):
@@ -64,7 +68,7 @@ def formated_host_group_list(host, group):
     build inventory and return it
     """
     # pylint: disable=line-too-long
-    return json.loads('{"_meta": {"hostvars": {' + str(hostvars(host)) + '}},"' + str(group) + '": {"hosts": ["' + str(host) + '"]},"instances": {"children": ["' + str(group) + '"]}}')
+    return json.loads('{"_meta": {"hostvars": {' + str(hostvars(host, group)) + '}},"' + str(group) + '": {"hosts": ["' + str(host) + '"]},"instances": {"children": ["' + str(group) + '"]}}')
 
 def main():
     """
