@@ -70,14 +70,6 @@
 	path = roles/amdgpu_firmware
 	url = https://github.com/DO1JLR/ansible_role_amdgpu_firmware.git
 	branch = main
-[submodule "roles/do1jlr.avahi"]
-	path = roles/do1jlr.avahi_daemon
-	url = https://github.com/roles-ansible/ansible_role_avahi_daemon.git
-	branch = main
-[submodule "roles/do1jlr.avahi_client"]
-	path = roles/do1jlr.avahi_client
-	url = https://github.com/roles-ansible/ansible_role_avahi_client.git
-	branch = main
 [submodule "roles/do1jlr.i3wm"]
 	path = roles/do1jlr.i3wm
 	url = https://github.com/roles-ansible/ansible_role_i3wm.git
@@ -96,3 +88,6 @@
 [submodule "roles/l3d.ntp"]
 	path = roles/l3d.ntp
 	url = https://github.com/roles-ansible/ansible_role_ntp.git
+[submodule "collections/ansible_collections/l3d/avahi"]
+	path = collections/ansible_collections/l3d/avahi
+	url = https://github.com/roles-ansible/ansible_collection_avahi.git
