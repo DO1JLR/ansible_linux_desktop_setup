@@ -1,5 +1,5 @@
 ---
-- name: check if ansible is not to old
+- name: Check if ansible is not to old
   hosts: all
   roles:
     - {role: ansible_version, tags: always, gather_facts: false}
