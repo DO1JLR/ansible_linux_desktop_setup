@@ -16,7 +16,7 @@
 	branch = main
 [submodule "files/admin_ssh_keys"]
 	path = files/admin_ssh_keys
-	url = https://backwesen.de/ansible/ssh_public_keys.git
+	url = https://git.l3d.ch/ansible/ssh_public_keys.git
 	branch = main
 [submodule "roles/sshd"]
 	path = roles/do1jlr.sshd
