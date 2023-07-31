@@ -70,5 +70,12 @@ i3_run_on_startup:
 
 htop__compile: true
 
+# roles/do1jlr.base
+l3d_pkgs__install_advanced: true
+l3d_pkgs__install_python: true
+l3d_pkgs__install_cli: true
+l3d_pkgs__install_extra_packages:
+  - keychain
+
 # globaly enably simple versionscheck - if available
 submodules_versioncheck: true

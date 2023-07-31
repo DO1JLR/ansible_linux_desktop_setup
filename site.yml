@@ -7,7 +7,7 @@
 - name: Generic Workstation Preperation
   hosts: all
   roles:
-    # - {role: do1jlr.base, tags: [default, packages, base]}
+    - {role: l3d.packages, tags: [packages, apt]}
     # - {role: workstation_packages, tags: [default, workstation_packages, packages, setup]}
     - {role: l3d.ntp, tags: ntp}
     - {role: l3d.avahi.client, tags: avahi}
