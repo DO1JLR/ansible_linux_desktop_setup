@@ -1,0 +1,7 @@
+---
+# l3d.i3wm
+i3wm_user_list:
+  - user: "l3d"
+    home: "/home/l3d"
+  - user: "lilian"
+    home: "/home/lilian"
