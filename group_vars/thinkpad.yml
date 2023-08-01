@@ -18,7 +18,7 @@ i3_packages_extra:
   - evince
   - speedtest-cli
 
-i3_font_size: 11
+i3_font_size: 13
 i3_focus_follows_mouse: true
 
 i3_desktop_background: "/home/{{ user }}/.config/background.png"
