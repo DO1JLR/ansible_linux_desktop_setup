@@ -90,3 +90,6 @@
 [submodule "roles/l3d.packages"]
 	path = roles/l3d.packages
 	url = https://github.com/roles-ansible/ansible_role_packages.git
+[submodule "roles/l3d.gopass"]
+	path = roles/l3d.gopass
+	url = https://github.com/roles-ansible/ansible_role_gopass.git
