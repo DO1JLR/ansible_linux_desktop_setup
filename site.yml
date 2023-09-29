@@ -14,6 +14,7 @@
     - {role: l3d.avahi.daemon, tags: avahi}
     - {role: gantsign.bat, tags: bat}
     # - {role: arch-fonts, tags: [font, fonts, arch-fonts]}
+    - {role: l3d.gopass, tags: gopass}
     - {role: do1jlr.i3wm, tags: i3wm}
 
 # - name: user specific setup
