@@ -20,4 +20,4 @@ jobs:
       - name: Run ansible-lint
         uses: ansible-actions/ansible-lint-action@v0.0.1
         with:
-          targetQ: "site.yml"
+          target: "site.yml"
