@@ -2,7 +2,7 @@
 - name: Check if ansible is not to old
   hosts: all
   roles:
-    - {role: ansible_version, tags: always, gather_facts: false}
+    - {role: ansible_version, tags: always}
 
 - name: Generic Workstation Preperation
   hosts: all
