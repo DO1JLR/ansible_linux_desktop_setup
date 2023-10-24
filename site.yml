@@ -12,6 +12,7 @@
     - {role: l3d.ntp, tags: ntp}
     - {role: l3d.avahi.client, tags: avahi}
     - {role: l3d.avahi.daemon, tags: avahi}
+    - {role: l3d.etesync_dav, tags: [etebase, etesync, dav]}
     - {role: gantsign.bat, tags: bat}
     # - {role: arch-fonts, tags: [font, fonts, arch-fonts]}
     - {role: l3d.gopass, tags: gopass}

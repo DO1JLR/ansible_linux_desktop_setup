@@ -93,3 +93,6 @@
 [submodule "roles/l3d.gopass"]
 	path = roles/l3d.gopass
 	url = https://github.com/roles-ansible/ansible_role_gopass.git
+[submodule "roles/l3d.etesync_dav"]
+	path = roles/l3d.etesync_dav
+	url = https://github.com/roles-ansible/ansible_role_etesync_dav.git
