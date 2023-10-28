@@ -1,42 +1,12 @@
 ---
-- name: perform versionscheck
-  ansible.builtin.include_tasks: versioncheck.yml
+- name: Perform versionscheck
+  ansible.builtin.include_tasks:
+    file: 'versioncheck.yml'
 
-- name: Run the equivalent of "pacman -Syu" as a separate step
-  become: true
-  ansible.builtin.pacman:
-    update_cache: true
-    upgrade: true
-  when: ansible_os_family == 'Archlinux'
+- name: Install openvpn packages
+  ansible.builtin.include_tasks:
+    file: 'install.yml'
 
-- name: Install OpenVPN for ArchLinux
-  become: true
-  ansible.builtin.pacman:
-    name:
-      - openvpn
-      - bridge-utils
-      - easy-rsa
-    state: present
-  when: ansible_os_family == 'Archlinux'
-
-- name: Install OpenVPN all
-  become: true
-  ansible.builtin.package:
-    name:
-      - openvpn
-      - bridge-utils
-      - easy-rsa
-    state: present
-  when: ansible_os_family != 'Archlinux'
-
-- name: Add the tun module
-  become: true
-  community.general.modprobe:
-    name: tun
-    state: present
-
-- name: Add the bridge module
-  become: true
-  community.general.modprobe:
-    name: bridge
-    state: present
+- name: Make sure openvpn modules are present
+  ansible.builtin.include_tasks:
+    file: 'modprobe.yml'

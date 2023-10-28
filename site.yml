@@ -8,13 +8,11 @@
   hosts: all
   roles:
     - {role: l3d.packages, tags: [packages, apt]}
-    # - {role: workstation_packages, tags: [default, workstation_packages, packages, setup]}
     - {role: l3d.ntp, tags: ntp}
     - {role: l3d.avahi.client, tags: avahi}
     - {role: l3d.avahi.daemon, tags: avahi}
     - {role: l3d.etesync_dav, tags: [etebase, etesync, dav]}
     - {role: gantsign.bat, tags: bat}
-    # - {role: arch-fonts, tags: [font, fonts, arch-fonts]}
     - {role: l3d.gopass, tags: gopass}
     - {role: do1jlr.i3wm, tags: i3wm}
 
@@ -28,11 +26,6 @@
 #     - {role: akku-warning, tags: [akku, akku_warning, akku-warning]}
 #     - {role: pulseaudio, tags: pulseaudio}
 #     - {role: networkmanager, tags: [nm, networkmanager]}
-#     - {role: copy_files}
-#     - {role: do1jlr.i3wm, tags: i3wm}
-#     - {role: xrandr, tags: xrandr}
-#     - {role: install-firefox, tags: firefox}
-#     - {role: nextcloud, tags: nextcloud}
 #     - {role: openvpn, tags: openvpn}
 #     - {role: winehq, tags: [wine, winehq]}
 #     - {role: no-sleep, tags: no_sleep}

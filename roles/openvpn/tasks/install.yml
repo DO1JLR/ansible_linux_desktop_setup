@@ -1,0 +1,24 @@
+---
+- name: Run the equivalent of "pacman -Sy" as a separate step  # noqa: H1901
+  become: true
+  community.general.pacman:
+    update_cache: true
+  when: ansible_os_family == 'Archlinux'
+
+- name: Update Debian apt cache
+  become: true
+  ansible.builtin.apt:
+    cache_valid_time: 3600
+    update_cache: true
+  when:
+    - ansible_pkg_mgr == "apt"
+
+- name: Install OpenVPN all
+  become: true
+  ansible.builtin.package:
+    name: "{{ item }}"
+    state: 'present'
+  loop:
+    - 'openvpn'
+    - 'bridge-utils'
+    - 'easy-rsa'
