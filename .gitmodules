@@ -2,10 +2,6 @@
 	path = roles/dotfiles
 	url = https://github.com/roles-ansible/ansible_role_dotfiles.git
 	branch = main
-[submodule "roles/pulseaudio"]
-	path = roles/pulseaudio
-	url = https://github.com/chaos-bodensee/role_pulseaudio_archlinux.git
-	branch = master
 [submodule "roles/authorized_keys"]
 	path = roles/do1jlr.auth
 	url = https://github.com/roles-ansible/ansible_role_auth.git
@@ -22,14 +18,10 @@
 	path = roles/akku-warning
 	url = https://github.com/roles-ansible/role_akku_warning.git
 	branch = main
-[submodule "roles/winehq"]
-	path = roles/winehq
-	url = https://github.com/ekultails/ansible_role_wine.git
-	branch = master
 [submodule "roles/no-sleep"]
 	path = roles/no-sleep
-	url = https://github.com/chaos-bodensee/role_disable_sleep.git
-	branch = master
+	url = https://github.com/roles-ansible/ansible_role_disable_sleep.git
+	branch = main
 [submodule "roles/manage_users"]
 	path = roles/do1jlr.users
 	url = https://github.com/roles-ansible/ansible_role_users.git

@@ -15,6 +15,8 @@
     - {role: gantsign.bat, tags: bat}
     - {role: l3d.gopass, tags: gopass}
     - {role: do1jlr.i3wm, tags: i3wm}
+    - {role: amdgpu_firmware, tags: firmware}
+    - {role: do1jlr.htop, tags: htop}
 
 # - name: user specific setup
 #   hosts: private
@@ -24,8 +26,9 @@
 #     - {role: authorized_keys, tags: [ssh, auth, authorized_keys]}
 #     - {role: sshd, tags: [ssh, sshd]}
 #     - {role: akku-warning, tags: [akku, akku_warning, akku-warning]}
-#     - {role: pulseaudio, tags: pulseaudio}
-#     - {role: networkmanager, tags: [nm, networkmanager]}
-#     - {role: openvpn, tags: openvpn}
-#     - {role: winehq, tags: [wine, winehq]}
 #     - {role: no-sleep, tags: no_sleep}
+
+- name: Setup business specific stuff
+  hosts: work
+  roles:
+    - {role: openvpn, tags: openvpn}
