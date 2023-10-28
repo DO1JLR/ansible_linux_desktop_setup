@@ -1,3 +1,0 @@
----
-playbook_version_number: 9001 # should be over ninethousand
-playbook_version_path: 'role-networkmanager_roles-ansible_github.com.version'

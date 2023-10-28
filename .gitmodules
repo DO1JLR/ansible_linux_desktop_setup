@@ -1,15 +1,7 @@
-[submodule "roles/workstation_packages"]
-	path = roles/workstation_packages
-	url = https://github.com/chaos-bodensee/role_install_workstaton_packages.git
-	branch = master
 [submodule "roles/dotfiles"]
 	path = roles/dotfiles
 	url = https://github.com/roles-ansible/ansible_role_dotfiles.git
 	branch = main
-[submodule "roles/pulseaudio"]
-	path = roles/pulseaudio
-	url = https://github.com/chaos-bodensee/role_pulseaudio_archlinux.git
-	branch = master
 [submodule "roles/authorized_keys"]
 	path = roles/do1jlr.auth
 	url = https://github.com/roles-ansible/ansible_role_auth.git
@@ -22,34 +14,14 @@
 	path = roles/do1jlr.sshd
 	url = https://github.com/roles-ansible/ansible_role_sshd.git
 	branch = main
-[submodule "roles/nextcloud"]
-	path = roles/nextcloud
-	url = https://github.com/DO1JLR/role_nextcloud_client.git
-	branch = master
-[submodule "roles/arch-fonts"]
-	path = roles/arch-fonts
-	url = https://github.com/chaos-bodensee/role-arch-fonts.git
-	branch = master
 [submodule "roles/akku-warning"]
 	path = roles/akku-warning
 	url = https://github.com/roles-ansible/role_akku_warning.git
 	branch = main
-[submodule "roles/install-firefox"]
-	path = roles/install-firefox
-	url = https://github.com/roles-ansible/ansible_role_install_firefox.git
-	branch = main
-[submodule "roles/xrandr"]
-	path = roles/xrandr
-	url = https://github.com/roles-ansible/ansible_role_xrandr_help.git
-	branch = main
-[submodule "roles/winehq"]
-	path = roles/winehq
-	url = https://github.com/ekultails/ansible_role_wine.git
-	branch = master
 [submodule "roles/no-sleep"]
 	path = roles/no-sleep
-	url = https://github.com/chaos-bodensee/role_disable_sleep.git
-	branch = master
+	url = https://github.com/roles-ansible/ansible_role_disable_sleep.git
+	branch = main
 [submodule "roles/manage_users"]
 	path = roles/do1jlr.users
 	url = https://github.com/roles-ansible/ansible_role_users.git

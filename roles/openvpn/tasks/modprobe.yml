@@ -1,0 +1,12 @@
+---
+- name: Add the tun module  # noqa: H1901
+  become: true
+  community.general.modprobe:
+    name: 'tun'
+    state: 'present'
+
+- name: Add the bridge module  # noqa: H1901
+  become: true
+  community.general.modprobe:
+    name: 'bridge'
+    state: 'present'
