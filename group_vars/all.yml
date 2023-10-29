@@ -75,8 +75,5 @@ l3d_pkgs__install_cli: true
 l3d_pkgs__install_extra_packages:
  - keychain
 
-# roles/do1jlr.htop
-htop__compile: true
-
 # globaly enably simple versionscheck - if available
 submodules_versioncheck: true
