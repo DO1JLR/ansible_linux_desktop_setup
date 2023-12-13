@@ -68,3 +68,6 @@
 [submodule "roles/l3d.etesync_dav"]
 	path = roles/l3d.etesync_dav
 	url = https://github.com/roles-ansible/ansible_role_etesync_dav.git
+[submodule "collections/ansible_collections/l3d/time"]
+	path = collections/ansible_collections/l3d/time
+	url = https://github.com/roles-ansible/ansible_collection_time.git
