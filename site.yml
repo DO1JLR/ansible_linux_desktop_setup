@@ -7,6 +7,14 @@
 - name: Generic Workstation Preperation
   hosts: all
   roles:
+    - {role: l3d.users.user, tags: user}
+    - {role: l3d.users.admin, tags: admin}
+    - {role: l3d.users.sshd, tags: sshd}
+    - {role: l3d.users.dotfiles, tags: dotfiles}
+
+- name: Generic Workstation Preperation
+  hosts: all
+  roles:
     - {role: l3d.packages, tags: [packages, apt]}
     - {role: l3d.time.ntp, tags: ntp}
     - {role: l3d.avahi.client, tags: avahi}
@@ -21,10 +29,6 @@
 # - name: user specific setup
 #   hosts: private
 #   roles:
-#     - {role: dotfiles, tags: [default, dotfiles, fancy]}
-#     - {role: manage_users, tags: [ssh, manage, manage_users]}
-#     - {role: authorized_keys, tags: [ssh, auth, authorized_keys]}
-#     - {role: sshd, tags: [ssh, sshd]}
 #     - {role: akku-warning, tags: [akku, akku_warning, akku-warning]}
 #     - {role: no-sleep, tags: no_sleep}
 
