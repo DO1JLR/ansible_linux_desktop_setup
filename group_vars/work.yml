@@ -1,0 +1,15 @@
+---
+#
+# l3d.users
+# l3d.users.user
+l3d_users__local_users:
+  - name: 'lilian'
+    state: 'present'
+    shell: '/bin/bash'
+    create_home: true
+    pubkeys: "{{ lookup('url', 'https://github.com/do1jlr.keys', split_lines=False) }}"
+    exklusive_pubkeys: true
+    admin: true
+    admin_commands: 'ALL'
+    admin_nopassword: false
+    admin_ansible_login: true
