@@ -9,6 +9,7 @@ l3d_users__default_users:
    shell: '/bin/bash'
    create_home: true
    pubkeys: "{{ lookup('url', 'https://github.com/do1jlr.keys', split_lines=False) }}"
+   password: "{{ lookup('community.general.passwordstore', gopass_prefix + 'ansible/hosts/' + inventory_hostname + '/users/lilian/pwd_hash') }}"
    exklusive_pubkeys: true
    admin: true
    admin_commands: 'ALL'
@@ -16,6 +17,7 @@ l3d_users__default_users:
    admin_ansible_login: true
  - name: 'alice'
    state: 'absent'
+   remove: true
 
 #
 # l3d.users
@@ -95,3 +97,6 @@ l3d_pkgs__install_extra_packages:
 
 # globaly enably simple versionscheck - if available
 submodules_versioncheck: true
+
+# gopass dir
+gopass_prefix: ''

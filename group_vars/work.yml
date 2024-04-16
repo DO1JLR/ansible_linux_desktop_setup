@@ -8,8 +8,12 @@ l3d_users__local_users:
     shell: '/bin/bash'
     create_home: true
     pubkeys: "{{ lookup('url', 'https://github.com/do1jlr.keys', split_lines=False) }}"
+    password: "{{ lookup('community.general.passwordstore', 'private/ansible/hosts/' + inventory_hostname + '/users/lilian/pwd_hash') }}"
     exklusive_pubkeys: true
     admin: true
     admin_commands: 'ALL'
     admin_nopassword: false
     admin_ansible_login: true
+
+# gopass dir
+gopass_prefix: 'private/'
