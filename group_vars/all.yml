@@ -15,9 +15,6 @@ l3d_users__default_users:
    admin_commands: 'ALL'
    admin_nopassword: false
    admin_ansible_login: true
- - name: 'alice'
-   state: 'absent'
-   remove: true
 
 #
 # l3d.users
@@ -85,8 +82,7 @@ i3_applications:
    on_startup: true
 
 i3_run_on_startup:
- # - nextcloud
- - sudo nm-applet
+ - nm-applet
 
 # roles/do1jlr.base
 l3d_pkgs__install_advanced: true
