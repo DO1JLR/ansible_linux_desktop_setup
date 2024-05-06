@@ -1,4 +1,6 @@
 ---
+#ansible_become_password: "{{ lookup('community.general.passwordstore', 'private/ansible/hosts/' + inventory_hostname + '/users/lilian/pwd') }}"
+
 # l3d.i3wm
 i3wm_user_list:
   - user: "l3d"
