@@ -9,7 +9,7 @@ l3d_users__default_users:
    shell: '/bin/bash'
    create_home: true
    pubkeys: "{{ lookup('url', 'https://github.com/do1jlr.keys', split_lines=False) }}"
-   password: "{{ lookup('community.general.passwordstore', gopass_prefix + 'ansible/hosts/' + inventory_hostname + '/users/lilian/pwd_hash') }}"
+   password: "{{ lookup('community.general.passwordstore', gopass_prefix + 'ansible/hosts/' + inventory_hostname + '/users/l3d/pwd_hash') }}"
    exklusive_pubkeys: true
    admin: true
    admin_commands: 'ALL'
@@ -63,11 +63,11 @@ i3_keybindings_extra:
  - keybinding:
    name: darker
    key: XF86MonBrightnessDown
-   exec: --no-startup-id sudo light -U 9
+   exec: --no-startup-id light -U 9
  - keybinding:
    name: lighter
    key: XF86MonBrightnessUp
-   exec: --no-startup-id sudo light -A 6
+   exec: --no-startup-id light -A 6
 
 i3_applications:
  - application:
