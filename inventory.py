@@ -7,10 +7,12 @@ import socket
 import sys
 import json
 
+INIT_HOST=False
+
 # create a dict to match hostnames to enviroments
 env_dict = {
   'work':
-    ['workstation.local', 'daringdoo.local'],
+    [],
   'private':
     ['derpy.local', 'applejack.local', 'rarity.local', 'discord.local']
 }
@@ -44,6 +46,8 @@ def env(domain):
     for key, values in env_dict.items():
         if domain in values:
             return key
+    if INIT_HOST:
+        return str('init')
     print(json.dumps(empty_host_list(domain), sort_keys=True, indent=2))
     sys.exit()
 
@@ -59,8 +63,10 @@ def hostvars(host, group):
     """
     set variables to local connection
     """
-    local = str('"' + host + '": {"ansible_connection": "local", '
-      + str(become_pass(host, group)) + '}')
+    local = str('"' + host + '": {"ansible_connection": "local"')
+    if not INIT_HOST:
+        local += str(', ' + str(become_pass(host, group)))
+    local += str('}')
     return local
 
 def formated_host_group_list(host, group):
