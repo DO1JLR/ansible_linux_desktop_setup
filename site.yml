@@ -22,9 +22,9 @@
     - {role: l3d.etesync_dav, tags: [etebase, etesync, dav]}
     - {role: gantsign.bat, tags: bat}
     - {role: l3d.gopass, tags: gopass}
-    - {role: do1jlr.i3wm, tags: i3wm}
-    - {role: roles-ansible.sway, tags: sway}
-    - {role: amdgpu_firmware, tags: firmware}
+    - {role: l3d.wm.i3, tags: i3wm}
+    - {role: l3d.wm.sway, tags: sway}
+    # - {role: amdgpu_firmware, tags: firmware}
     - {role: do1jlr.htop, tags: htop}
 
 # - name: user specific setup
