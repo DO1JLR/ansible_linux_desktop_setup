@@ -85,11 +85,10 @@ i3_run_on_startup:
  - nm-applet
 
 # roles/do1jlr.base
-l3d_pkgs__install_advanced: true
-l3d_pkgs__install_python: true
-l3d_pkgs__install_cli: true
-l3d_pkgs__install_extra_packages:
- - keychain
+packages__install_advanced: true
+packages__install_python: true
+packages__install_cli: true
+packages__install_desktop: true
 
 # globaly enably simple versionscheck - if available
 submodules_versioncheck: true
