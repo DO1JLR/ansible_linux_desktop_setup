@@ -71,8 +71,8 @@ i3_keybindings_extra:
 
 i3_applications:
  - application:
-   class: "firefox"
-   name: "firefox"
+   class: "librewolf"
+   name: "librewolf"
    workspace: 2
    on_startup: true
  - application:
