@@ -73,3 +73,6 @@
 [submodule "roles/roles-ansible.gopass"]
 	path = roles/roles-ansible.gopass
 	url = https://github.com/roles-ansible/ansible_role_gopass.git
+[submodule "roles/hax0rbana_adam.librewolf"]
+	path = roles/hax0rbana_adam.librewolf
+	url = https://gitlab.hax0rbana.org/public-repos/ansible/librewolf.git

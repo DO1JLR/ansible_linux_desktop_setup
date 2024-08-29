@@ -12,7 +12,7 @@ INIT_HOST=False
 # create a dict to match hostnames to enviroments
 env_dict = {
   'work':
-    [],
+    ['macbook.local'],
   'private':
     ['derpy.local', 'applejack.local', 'rarity.local', 'discord.local']
 }

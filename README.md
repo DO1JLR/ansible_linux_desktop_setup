@@ -49,6 +49,37 @@ To use this by yourself copy or change a existing playbook and modify the variab
 Or create a new git repo and be inspired by the roles L3D uses.
 
 
+ Add a New Device
+------------------
+1. After you installed the OS and cloned this git repo with all sumodules, you have to change the inventory.py script.
+* Make sure you changed the ``INIT_HOST`` boolean variable to just install gopass.
+* After running the playbook create a gopass and set a few passwords
+* Add new device to ``env_dict`` and restore the ``INIT_HOST``  value
+* Run ansible
+
+ Used Gopass Variables
+-----------------------
+For ``work`` devices:
+```ini
+private/ansible/hosts/<hostname>/users/
+├── l3d/
+│   ├── pwd
+│   └── pwd_hash
+├── lilian/
+│   ├── pwd
+│   └── pwd_hash
+└── root
+```
+
+For ``private`` devices:
+```ini
+ansible/hosts/<hostname>/users/
+├── l3d/
+│   ├── pwd
+│   └── pwd_hash
+└── root
+```
+
  Feedback
 ------------
 If you find this usefull please take a few secounds and say thankyou to L3D.

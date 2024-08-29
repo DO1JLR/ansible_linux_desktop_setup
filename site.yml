@@ -28,6 +28,7 @@
     - {role: gantsign.bat, tags: bat}
     - {role: l3d.wm.i3, tags: i3wm}
     - {role: l3d.wm.sway, tags: sway}
+    - {role: hax0rbana_adam.librewolf, tags: librewolf}
     # - {role: amdgpu_firmware, tags: firmware}
     - {role: do1jlr.htop, tags: htop}
 
