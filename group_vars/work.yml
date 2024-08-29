@@ -17,5 +17,8 @@ l3d_users__local_users:
     groups: ['libvirt']
 l3d_users__additional_groups: ['libvirt']
 
+# l3d.packages
+packages__install_extra_packages:
+  - virt-manager
 # gopass dir
 gopass_prefix: 'private/'
