@@ -39,6 +39,15 @@ l3d_users__dotfiles__additional_user_bashrc_lines:
 # define dir for ssh keys
 ssh_public_key_store: 'admin_ssh_keys'
 
+# Collection l3d.wm
+## l3d.wm.sway
+sway__user_list:
+  - user: "l3d"
+    home: "/home/l3d"
+
+sway__term: 'terminator'
+
+# # l3d.wm.i3
 i3_keybindings_extra:
  - keybinding:
    name: Volume (mute/unmute)
