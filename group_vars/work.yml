@@ -22,3 +22,11 @@ packages__install_extra_packages:
   - virt-manager
 # gopass dir
 gopass_prefix: 'private/'
+
+# Collection l3d.wm
+## l3d.wm.sway
+sway__user_list:
+  - user: "l3d"
+    home: "/home/l3d"
+  - user: 'lilian'
+    home: '/home/lilian'
