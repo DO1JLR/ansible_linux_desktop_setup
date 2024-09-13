@@ -42,8 +42,8 @@ ssh_public_key_store: 'admin_ssh_keys'
 # Collection l3d.wm
 ## l3d.wm.sway
 sway__user_list:
-  - user: "l3d"
-    home: "/home/l3d"
+ - user: "l3d"
+   home: "/home/l3d"
 
 sway__term: 'terminator'
 
