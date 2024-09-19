@@ -55,9 +55,6 @@
 [submodule "collections/ansible_collections/l3d/avahi"]
 	path = collections/ansible_collections/l3d/avahi
 	url = https://github.com/roles-ansible/ansible_collection_avahi.git
-[submodule "roles/l3d.packages"]
-	path = roles/l3d.packages
-	url = https://github.com/roles-ansible/ansible_role_packages.git
 [submodule "roles/l3d.etesync_dav"]
 	path = roles/l3d.etesync_dav
 	url = https://github.com/roles-ansible/ansible_role_etesync_dav.git
@@ -73,6 +70,6 @@
 [submodule "roles/roles-ansible.gopass"]
 	path = roles/roles-ansible.gopass
 	url = https://github.com/roles-ansible/ansible_role_gopass.git
-[submodule "roles/hax0rbana_adam.librewolf"]
-	path = roles/hax0rbana_adam.librewolf
-	url = https://gitlab.hax0rbana.org/public-repos/ansible/librewolf.git
+[submodule "collections/ansible_collections/l3d/linux"]
+	path = collections/ansible_collections/l3d/linux
+	url = https://github.com/roles-ansible/ansible_collection_linux.git
