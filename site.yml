@@ -20,7 +20,7 @@
 - name: Generic Workstation Preperation
   hosts: [work, private]
   roles:
-    - {role: l3d.packages, tags: [packages, apt]}
+    - {role: l3d.linux.packages, tags: [packages, apt]}
     - {role: l3d.time.ntp, tags: ntp}
     - {role: l3d.avahi.client, tags: avahi}
     - {role: l3d.avahi.daemon, tags: avahi}
