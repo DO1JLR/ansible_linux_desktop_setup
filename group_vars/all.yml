@@ -108,3 +108,22 @@ gopass_prefix: ''
 # librewolf
 librewolf__xdg_settings: true
 librewolf__xdg_settings_user: "{{ sway__user_list }}"
+
+sway__waybar_modules_right:
+  - "idle_inhibitor"
+  - "custom/weather"
+  - "pulseaudio"
+  - "network"
+  - "custom/ping"
+  - "cpu"
+  - "memory"
+  - "disk"
+  - "temperature"
+  - "backlight"
+  - "keyboard-state"
+  - "sway/language"
+  - "battery"
+  - "custom/power"
+  - "custom/clock"
+  - "tray"
+
