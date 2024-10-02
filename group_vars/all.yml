@@ -126,4 +126,4 @@ sway__waybar_modules_right:
   - "custom/power"
   - "custom/clock"
   - "tray"
-
+  - "custom/notification"
