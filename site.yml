@@ -16,6 +16,7 @@
     - {role: l3d.users.admin, tags: admin}
     - {role: l3d.users.sshd, tags: sshd}
     - {role: l3d.users.dotfiles, tags: dotfiles}
+    - {role: l3d.linux.swappiness, tags: swappiness}
 
 - name: Generic Workstation Preperation
   hosts: [work, private]
