@@ -1,7 +1,3 @@
-[submodule "roles/dotfiles"]
-	path = roles/dotfiles
-	url = https://github.com/roles-ansible/ansible_role_dotfiles.git
-	branch = main
 [submodule "roles/authorized_keys"]
 	path = roles/do1jlr.auth
 	url = https://github.com/roles-ansible/ansible_role_auth.git
@@ -49,9 +45,6 @@
 [submodule "roles/gantsign.bat"]
 	path = roles/gantsign.bat
 	url = https://github.com/gantsign/ansible_role_bat.git
-[submodule "roles/l3d.ntp"]
-	path = roles/l3d.ntp
-	url = https://github.com/roles-ansible/ansible_role_ntp.git
 [submodule "collections/ansible_collections/l3d/avahi"]
 	path = collections/ansible_collections/l3d/avahi
 	url = https://github.com/roles-ansible/ansible_collection_avahi.git
