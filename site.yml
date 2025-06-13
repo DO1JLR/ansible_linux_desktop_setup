@@ -22,14 +22,14 @@
   hosts: [work, private]
   roles:
     - {role: l3d.linux.packages, tags: [packages, apt]}
-    - {role: l3d.time.ntp, tags: ntp}
+    # - {role: l3d.time.ntp, tags: ntp}
     - {role: l3d.avahi.client, tags: avahi}
     - {role: l3d.avahi.daemon, tags: avahi}
-    - {role: l3d.etesync_dav, tags: [etebase, etesync, dav]}
-    - {role: gantsign.bat, tags: bat}
+    # - {role: l3d.etesync_dav, tags: [etebase, etesync, dav]}
+    # - {role: gantsign.bat, tags: bat}
     - {role: l3d.wm.i3, tags: i3wm}
     - {role: l3d.wm.sway, tags: sway}
-    - {role: l3d.linux.librewolf, tags: librewolf}
+    # - {role: l3d.linux.librewolf, tags: librewolf}
     # - {role: amdgpu_firmware, tags: firmware}
     - {role: do1jlr.htop, tags: htop}
 
@@ -39,7 +39,7 @@
 #     - {role: akku-warning, tags: [akku, akku_warning, akku-warning]}
 #     - {role: no-sleep, tags: no_sleep}
 
-- name: Setup business specific stuff
-  hosts: work
-  roles:
-    - {role: openvpn, tags: openvpn}
+# - name: Setup business specific stuff
+#   hosts: work
+#   roles:
+#     - {role: openvpn, tags: openvpn}
