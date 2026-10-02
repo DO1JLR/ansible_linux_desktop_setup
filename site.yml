@@ -4,10 +4,10 @@
   roles:
     - {role: ansible_version, tags: always}
 
-- name: Setup GoPass
-  hosts: all
-  roles:
-    - {role: roles-ansible.gopass, tags: gopass}
+# - name: Setup GoPass
+#   hosts: all
+#   roles:
+#     - {role: roles-ansible.gopass, tags: gopass}
 
 - name: Generic Workstation Preperation
   hosts: [work, private]
